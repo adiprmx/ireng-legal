@@ -3,301 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kebijakan Privasi | Ireng, ADIP RMX</title>
-<meta name="description" content="Kebijakan Privasi bot Ireng di server Discord ADIP RMX. Data apa yang disimpan, buat apa, dan hak kamu atas data itu.">
+<title>Kebijakan Privasi — Ireng · ADIP RMX</title>
+<meta name="description" content="Kebijakan Privasi Ireng: penjelasan jujur soal data apa yang disimpan bot Discord komunitas ADIP RMX, dan kenapa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-
 <div id="progress"></div>
+<div id="glow"></div>
 
-<header class="topbar">
-  <a class="brand" href="privacy-policy.html">
-    <span class="bname">Ire<i>ng</i></span>
-    <span class="bsub">ADIP RMX</span>
-  </a>
-  <nav class="docnav">
-    <a href="privacy-policy.html" class="on">Privasi</a>
-    <a href="terms-of-service.html">Syarat Layanan</a>
-  </nav>
+<header class="hero">
+  <canvas id="dust"></canvas>
+  <div class="watermark">§</div>
+  <div class="hero-inner">
+    <span class="kicker">🐈‍⬛ ADIP RMX · Dokumen Resmi</span>
+    <h1>Kebijakan <span class="shine">Privasi</span></h1>
+    <p class="lede">Data lu, hak lu. Ini penjelasan jujur soal apa yang Ireng simpan, buat apa, dan sampai kapan — ditulis biar ngerti, bukan biar ngantuk.</p>
+    <div class="seals">
+      <span class="seal"><span class="dot"></span>Berlaku <b>1 Oktober 2026</b></span>
+      <span class="seal"><span class="dot"></span>Server <b>ADIP RMX</b></span>
+      <span class="seal"><span class="dot"></span>Versi <b>2.0</b></span>
+    </div>
+    <nav class="doctabs" aria-label="Dokumen legal">
+      <a href="privacy-policy.html" class="active">Kebijakan Privasi</a>
+      <a href="terms-of-service.html">Syarat Layanan</a>
+    </nav>
+  </div>
+  <div class="scrollcue"><span>Gulir</span><span class="rail"></span></div>
 </header>
 
-<div class="hero">
-  <div class="hero-copy">
-    <p class="kicker rv">Dokumen resmi server ADIP RMX</p>
-    <h1 class="rv">Kebijakan <em>Privasi</em></h1>
-    <p class="lede rv">Penjelasan jujur soal data yang Ireng simpan, buat apa, dan sampai kapan. Ditulis biar ngerti, bukan biar ngantuk.</p>
-    <div class="hero-cta rv">
-      <a class="btn" href="#mengapa">Mulai baca</a>
-      <a class="link-arrow" href="#faq">Sering ditanyakan</a>
-    </div>
-  </div>
-  <figure class="hero-fig rv" aria-hidden="true">
-    <div class="frame"><img src="hero-texture.jpg" alt="" fetchpriority="high"></div>
-  </figure>
-</div>
-
-<div class="facts">
-  <div class="facts-in rv">
-    <div class="fact"><div class="fl">Berlaku sejak</div><div class="fv">1 Oktober 2026</div></div>
-    <div class="fact"><div class="fl">Berlaku untuk</div><div class="fv">Server ADIP RMX</div></div>
-    <div class="fact"><div class="fl">Bahasa dokumen</div><div class="fv">Bahasa Indonesia</div></div>
-  </div>
-</div>
-
-<div class="layout">
-
-  <aside class="rail">
-    <nav>
-      <a href="#mengapa"><span class="rn">01</span>Mengapa halaman ini ada</a>
-      <a href="#data"><span class="rn">02</span>Data yang disimpan</a>
-      <a href="#ruang"><span class="rn">03</span>Ruang pribadi</a>
-      <a href="#tujuan"><span class="rn">04</span>Tujuan pemakaian</a>
-      <a href="#pihak-ketiga"><span class="rn">05</span>Pihak ketiga</a>
-      <a href="#keamanan"><span class="rn">06</span>Keamanan</a>
-      <a href="#hak"><span class="rn">07</span>Hak kamu</a>
-      <a href="#retensi"><span class="rn">08</span>Lama penyimpanan</a>
-      <a href="#kontak"><span class="rn">09</span>Kontak</a>
-      <a href="#faq"><span class="rn">10</span>Sering ditanyakan</a>
-    </nav>
-  </aside>
+<div class="shell">
+  <nav class="rail" aria-label="Daftar bab">
+    <h3>Daftar Bab</h3>
+    <a href="#mengapa"><span class="n">01</span>Kenapa dokumen ini ada</a>
+    <a href="#data"><span class="n">02</span>Yang Ireng simpan</a>
+    <a href="#ruang"><span class="n">03</span>Ruang pribadi</a>
+    <a href="#tujuan"><span class="n">04</span>Buat apa semuanya</a>
+    <a href="#pihak-ketiga"><span class="n">05</span>Pihak ketiga &amp; AI</a>
+    <a href="#keamanan"><span class="n">06</span>Keamanan</a>
+    <a href="#hak"><span class="n">07</span>Hak kamu</a>
+    <a href="#retensi"><span class="n">08</span>Berapa lama disimpan</a>
+    <a href="#kontak"><span class="n">09</span>Perubahan &amp; kontak</a>
+    <a href="#faq"><span class="n">?</span>FAQ</a>
+  </nav>
 
   <main>
-
-    <section class="ch rv" id="mengapa">
-      <div class="ghost" aria-hidden="true">01</div>
-      <div class="ch-head">
-        <h2>Kenapa halaman ini ada</h2>
-        <button class="copylink" data-target="mengapa" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Data lu, hak lu. Halaman ini jelasin data apa aja yang Ireng simpen, buat apa, sama sampai kapan.</p>
-      <p class="dropcap">Ireng adalah bot yang jalan di server Discord <strong>ADIP RMX</strong>. Biar fiturnya jalan, Ireng perlu nyimpen sejumlah data tentang member. Kebijakan ini nulis semuanya apa adanya, tanpa bahasa muter-muter: data apa yang diambil, dipakai buat apa, disimpan berapa lama, dan hak kamu atas data itu.</p>
-      <p>Prinsipnya sederhana. Data cuma dipakai buat ngejalanin fitur server. Nggak dijual, nggak dipakai buat iklan, nggak dibagikan ke pihak yang nggak berkepentingan. Kalau ada yang berubah dari kebijakan ini, pengumumannya selalu keluar di channel pengumuman server dulu.</p>
+    <section class="chapter reveal" id="mengapa">
+      <span class="ghost">01</span>
+      <div class="eyebrow">Bab 01</div>
+      <h2>Kenapa dokumen ini ada <button class="copylink" data-target="mengapa" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Kebanyakan kebijakan privasi ditulis biar lolos syarat, bukan biar dibaca. Yang ini beda: Ireng itu bot komunitas, dan komunitas jalan di atas kepercayaan.</p>
+      <p>Dokumen ini ngelist dengan jujur: data apa yang Ireng simpan waktu kamu main di server <strong>ADIP RMX</strong>, buat apa, dibagi ke siapa, dan berapa lama disimpannya. Nggak ada bahasa hukum yang disembunyiin, nggak ada asterisk kecil di bawah. Kalau ada yang bikin kamu nggak nyaman setelah baca ini, itu hak kamu — dan caranya protes ada di <a href="#hak">Bab 07</a>.</p>
     </section>
 
-    <section class="ch rv" id="data">
-      <div class="ghost" aria-hidden="true">02</div>
-      <div class="ch-head">
-        <h2>Data yang Ireng simpan</h2>
-        <button class="copylink" data-target="data" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Cuma yang dibutuhin fitur. Bukan data HP lu, bukan lokasi, bukan hal-hal di luar server.</p>
-      <div class="defs">
-        <div class="def">
-          <div class="dn">Profil Discord</div>
-          <p><span class="tag">Isi</span>User ID, username, avatar, tanggal gabung server.</p>
-          <p><span class="tag">Buat</span>Kartu member, sapaan, dan fitur profil.</p>
-        </div>
-        <div class="def">
-          <div class="dn">Level dan XP</div>
-          <p><span class="tag">Isi</span>Poin pengalaman, level, hitungan aktivitas chat dan voice.</p>
-          <p><span class="tag">Buat</span>Sistem level, leaderboard, dan badge.</p>
-        </div>
-        <div class="def">
-          <div class="dn">Riwayat obrolan AI</div>
-          <p><span class="tag">Isi</span>Isi percakapan kamu sama Ireng di ruang pribadi, maksimal 12 pesan terakhir.</p>
-          <p><span class="tag">Buat</span>Biar obrolannya nyambung, nggak amnesia tiap pesan.</p>
-        </div>
-        <div class="def">
-          <div class="dn">Log moderasi</div>
-          <p><span class="tag">Isi</span>Catatan peringatan, timeout, dan tindakan staff.</p>
-          <p><span class="tag">Buat</span>Keamanan server dan riwayat penindakan.</p>
-        </div>
-        <div class="def">
-          <div class="dn">Pengaturan server</div>
-          <p><span class="tag">Isi</span>Konfigurasi fitur yang diatur staff, misalnya auto-responder dan daftar tontonan.</p>
-          <p><span class="tag">Buat</span>Ngejalanin fitur sesuai aturan server.</p>
-        </div>
-        <div class="def">
-          <div class="dn">Data teknis</div>
-          <p><span class="tag">Isi</span>Catatan error dan kejadian penting di bot.</p>
-          <p><span class="tag">Buat</span>Ngecek gangguan dan benerin bug.</p>
-        </div>
-      </div>
-      <p style="margin-top:2rem">Ireng <strong>nggak</strong> ngambil kata sandi, data pembayaran, kontak pribadi, atau isi DM kamu di luar server. Ireng cuma bisa baca channel yang memang dikasih akses sama pengaturan server.</p>
+    <section class="chapter reveal" id="data">
+      <span class="ghost">02</span>
+      <div class="eyebrow">Bab 02</div>
+      <h2>Yang Ireng simpan <button class="copylink" data-target="data" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Prinsipnya satu: simpan seminim mungkin, cuma yang beneran dibutuhin fitur. Ini daftar lengkapnya — nggak ada yang disembunyiin di luar tabel ini.</p>
+      <table class="ledger">
+        <thead><tr><th>Data</th><th>Isinya</th><th>Buat apa</th></tr></thead>
+        <tbody>
+          <tr><td>Identitas Discord</td><td>Username, user ID, avatar</td><td>Nampilin kartu member, level, dan sapaan yang personal</td></tr>
+          <tr><td>Level &amp; XP</td><td>Poin aktivitas chat &amp; voice</td><td>Sistem level server dan badge achievement</td></tr>
+          <tr><td>Obrolan ruang pribadi</td><td>Ingatan pendek — beberapa pesan terakhir aja</td><td>Biar ngobrol sama AI-nya nyambung, bukan amnesia tiap pesan</td></tr>
+          <tr><td>Catatan moderasi</td><td>Peringatan (warning) dan log tindakan staff</td><td>Keamanan server; warning kedaluwarsa otomatis 7 hari</td></tr>
+          <tr><td>Backup struktur</td><td>Daftar channel, role, pengaturan server</td><td>Pemulihan darurat kalau server kena masalah</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><p><strong>Yang <em>nggak</em> disimpan:</strong> isi DM kamu, password atau token apapun milikmu, dan riwayat browsing kamu. Ireng nggak punya urusan sama itu semua.</p></div>
     </section>
 
-    <section class="ch rv" id="ruang">
-      <div class="ghost" aria-hidden="true">03</div>
-      <div class="ch-head">
-        <h2>Ruang pribadi</h2>
-        <button class="copylink" data-target="ruang" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+    <section class="chapter reveal" id="ruang">
+      <span class="ghost">03</span>
+      <div class="eyebrow">Bab 03</div>
+      <h2>Ruang pribadi: bentengnya <button class="copylink" data-target="ruang" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Ruang pribadi (<em>/ruangpribadi</em>) itu tempat ngobrol sama AI-nya Ireng — dan ini bagian yang paling serius dijagain.</p>
+      <div class="oath">
+        <p>Chat kamu di ruang pribadi itu urusan kamu. Bot nggak akan melayani orang lain yang nyasar masuk, nggak akan nyimpen potongan chatnya, dan nggak akan nampilin ke siapa-siapa.</p>
+        <cite>— Janji desain Ireng</cite>
       </div>
-      <p class="clede">Ruang ini fitur paling sensitif di server, jadi perlakuannya juga paling ketat.</p>
-      <p>Perintah <strong>/ruangpribadi</strong> bikin satu channel khusus buat kamu ngobrol sama Ireng. Channelnya diatur biar nggak bisa dilihat member lain, role staff, maupun role biasa lainnya. Cuma kamu dan Ireng yang punya akses baca-tulis di situ.</p>
-      <p>Biar jawabannya nyambung, Ireng nyimpen riwayat obrolan di ruang itu, maksimal 12 pesan terakhir antara kamu dan Ireng. Riwayat ini <strong>nggak</strong> dicatat ke log publik mana pun, dan pesan yang nggak terjawab di ruang pribadi nggak masuk daftar pantauan staff.</p>
-      <figure class="oath">
-        <span class="qm" aria-hidden="true">&ldquo;</span>
-        <blockquote>Obrolan lu di ruang pribadi nggak dibaca manusia, nggak dipakai buat iklan, nggak dijual ke siapa pun.</blockquote>
-        <figcaption>Komitmen ruang pribadi, ADIP RMX</figcaption>
-      </figure>
-      <div class="note">
-        <div class="nl">Catatan penting</div>
-        <p>Secara teknis, pemilik server dan pemegang role Administrator tetap bisa membuka channel pribadi. Itu batasan dari Discord sendiri dan berlaku di semua server, bukan cuma di sini.</p>
-        <p>Walaupun begitu, Ireng cuma bakal ngerespons pemilik ruangnya. Pesan dari orang lain di ruang itu bakal diabaikan total: nggak dijawab, nggak disimpan.</p>
-      </div>
-    </section>
-
-    <section class="ch rv" id="tujuan">
-      <div class="ghost" aria-hidden="true">04</div>
-      <div class="ch-head">
-        <h2>Buat apa datanya dipakai</h2>
-        <button class="copylink" data-target="tujuan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Empat tujuan, semuanya soal ngejalanin server. Nggak ada tujuan kelima yang disembunyiin.</p>
       <ul>
-        <li><strong>Ngejalanin fitur.</strong> Level, kartu member, badge, pengingat, dan semua perintah bot butuh data biar bisa kerja.</li>
-        <li><strong>Jaga keamanan.</strong> Log moderasi dan catatan peringatan dipakai staff buat nanganin spam, raid, dan pelanggaran aturan.</li>
-        <li><strong>Bikin obrolan AI nyambung.</strong> Riwayat singkat di ruang pribadi dipakai jadi konteks jawaban berikutnya.</li>
-        <li><strong>Benerin masalah.</strong> Catatan error dipakai buat nyari sumber bug dan mastiin bot stabil.</li>
+        <li>Channel ruang pribadi dikunci per pemilik: member lain dan staff biasa <strong>nggak bisa lihat</strong> dari sisi tampilan channel.</li>
+        <li>Ireng cuma ngobrol sama <strong>pemilik ruang yang terdaftar</strong>. Orang lain yang ngetik di situ didiemin total — tanpa respons, tanpa jejak.</li>
+        <li>Chat yang gagal dijawab di ruang pribadi <strong>tidak</strong> masuk catatan error yang bisa dibaca owner.</li>
+      </ul>
+      <div class="note"><p><strong>Jujur sekalian:</strong> pemilik server dan pemegang izin Administrator secara teknis tetap bisa membuka channel apapun — itu batasan platform Discord, bukan pilihan Ireng. Tapi nggak ada staff atau member yang bisa, dan bot tidak akan melayani mereka.</p></div>
+    </section>
+
+    <section class="chapter reveal" id="tujuan">
+      <span class="ghost">04</span>
+      <div class="eyebrow">Bab 04</div>
+      <h2>Buat apa semuanya <button class="copylink" data-target="tujuan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Singkatnya: biar servernya jalan dan seru. Nggak lebih.</p>
+      <p>Semua data di Bab 02 dipakai <strong>hanya</strong> untuk menjalankan fitur bot di server ADIP RMX — level, kartu member, moderasi, backup, dan ngobrol AI. Data <strong>tidak dijual</strong>, <strong>tidak dibagikan</strong> ke pihak ketiga untuk kepentingan komersial, dan <strong>tidak dipakai buat iklan</strong>. Titik.</p>
+    </section>
+
+    <section class="chapter reveal" id="pihak-ketiga">
+      <span class="ghost">05</span>
+      <div class="eyebrow">Bab 05</div>
+      <h2>Pihak ketiga &amp; AI <button class="copylink" data-target="pihak-ketiga" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Bagian ini ditulis eksplisit biar nggak ada yang ngerasa dibohongin.</p>
+      <p>Saat kamu ngobrol di ruang pribadi, pesanmu diteruskan ke <strong>penyedia model AI (Google Gemini sebagai utama, dengan penyedia cadangan kalau yang utama lagi penuh)</strong> untuk menghasilkan jawaban. Penyedia AI memproses isi pesan dan username pengirim sesuai kebijakan mereka masing-masing. Ini satu-satunya "pihak ketiga" selain <strong>Discord</strong> sendiri sebagai platform tempat bot ini jalan — dan pemrosesannya murni untuk fitur chat, bukan untuk dijual atau diiklankan.</p>
+    </section>
+
+    <section class="chapter reveal" id="keamanan">
+      <span class="ghost">06</span>
+      <div class="eyebrow">Bab 06</div>
+      <h2>Keamanan <button class="copylink" data-target="keamanan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Nggak ada sistem yang 100% kebal — yang bisa dilakuin cuma bikin bobolnya sesusah mungkin.</p>
+      <ul>
+        <li>Akses data dibatasi — cuma sistem bot dan owner server.</li>
+        <li>Kredensial bot disimpan di file konfigurasi lokal dengan hak akses terbatas — cuma pemilik server yang bisa baca, tidak pernah ditampilkan di chat.</li>
+        <li>Tidak ada sistem yang 100% kebal — kalau ada insiden yang nyangkut data user, bakal diumumin di channel pengumuman server.</li>
       </ul>
     </section>
 
-    <section class="ch rv" id="pihak-ketiga">
-      <div class="ghost" aria-hidden="true">05</div>
-      <div class="ch-head">
-        <h2>Pihak ketiga</h2>
-        <button class="copylink" data-target="pihak-ketiga" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Data lu nggak dijual dan nggak jadi bahan iklan. Titik. Tapi ada layanan yang memang kepakai biar botnya jalan.</p>
+    <section class="chapter reveal" id="hak">
+      <span class="ghost">07</span>
+      <div class="eyebrow">Bab 07</div>
+      <h2>Hak kamu <button class="copylink" data-target="hak" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Datanya tentang kamu — jadi kamulah yang pegang kendali.</p>
       <ul>
-        <li><strong>Discord.</strong> Semua aktivitas terjadi di platform Discord, jadi tunduk juga ke Kebijakan Privasi Discord.</li>
-        <li><strong>Penyedia AI.</strong> Pesan yang kamu kirim ke Ireng di ruang pribadi diteruskan ke penyedia model AI buat diolah jadi jawaban. Penyedia utamanya Google Gemini, dengan penyedia cadangan kalau yang utama lagi gangguan. Yang diteruskan cuma isi pesan dan konteks obrolannya.</li>
-        <li><strong>Layanan konten.</strong> Buat notifikasi video dan feed, Ireng ngambil data publik dari YouTube dan RSS. Nggak ada data member yang dikirim ke sana.</li>
+        <li><strong>Lihat</strong> — minta ringkasan data kamu yang disimpan bot.</li>
+        <li><strong>Hapus</strong> — minta datamu dihapus permanen.</li>
+        <li><strong>Keluar</strong> — leave dari server = Ireng berhenti ngumpulin data baru tentangmu.</li>
       </ul>
-      <p>Di luar itu, nggak ada data yang dibagikan. Nggak ke pengiklan, nggak ke broker data, nggak ke server lain.</p>
+      <p>Caranya: hubungi <strong>owner / staff ADIP RMX</strong>. Permintaan yang wajar akan ditindaklanjuti.</p>
     </section>
 
-    <section class="ch rv" id="keamanan">
-      <div class="ghost" aria-hidden="true">06</div>
-      <div class="ch-head">
-        <h2>Keamanan</h2>
-        <button class="copylink" data-target="keamanan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Nggak ada sistem yang 100% kebal. Yang bisa dilakuin adalah ngecilin risikonya sejauh mungkin, dan itu yang dikerjain.</p>
-      <ul>
-        <li><strong>Akses dibatasi.</strong> Data bot cuma bisa diakses dari mesin server tempat Ireng jalan.</li>
-        <li><strong>Kredensial terkunci.</strong> Token bot dan kunci API disimpan lokal di server dalam file dengan izin akses terkunci. Kuncinya nggak pernah ditampilkan di channel mana pun.</li>
-        <li><strong>Perintah sensitif khusus staff.</strong> Command yang mengubah pengaturan server cuma bisa dipakai staff. Member biasa nggak bisa ngutak-atik konfigurasi.</li>
-        <li><strong>Ruang pribadi diisolasi.</strong> Obrolan pribadi nggak dicampur ke log publik dan nggak dipakai di luar ruangnya.</li>
-      </ul>
-      <p>Kalau suatu saat ada kejadian keamanan yang berdampak ke data member, pengumumannya bakal disampaikan terbuka di server, bukan ditutup-tutupi.</p>
+    <section class="chapter reveal" id="retensi">
+      <span class="ghost">08</span>
+      <div class="eyebrow">Bab 08</div>
+      <h2>Berapa lama disimpan <button class="copylink" data-target="retensi" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Data nggak disimpen selamanya. Tiap jenis punya masa berlakunya sendiri.</p>
+      <table class="ledger">
+        <thead><tr><th>Data</th><th>Masa simpan</th></tr></thead>
+        <tbody>
+          <tr><td>Peringatan moderasi</td><td>Kedaluwarsa otomatis setelah 7 hari</td></tr>
+          <tr><td>Level, XP, badge</td><td>Selama kamu jadi member server</td></tr>
+          <tr><td>Ingatan obrolan ruang pribadi</td><td>Pendek — cuma beberapa pesan terakhir biar nyambung</td></tr>
+          <tr><td>Backup struktur server</td><td>Berkala, diganti versi terbaru</td></tr>
+        </tbody>
+      </table>
     </section>
 
-    <section class="ch rv" id="hak">
-      <div class="ghost" aria-hidden="true">07</div>
-      <div class="ch-head">
-        <h2>Hak kamu</h2>
-        <button class="copylink" data-target="hak" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Datanya tentang kamu, jadi kamu yang pegang kendali.</p>
-      <div class="cols3">
-        <div class="col">
-          <h3>Minta lihat</h3>
-          <p>Kamu bisa minta lihat data apa aja yang Ireng simpan tentang akun kamu. Hubungi pemilik server, nanti ditunjukkan.</p>
-        </div>
-        <div class="col">
-          <h3>Minta hapus</h3>
-          <p>Kamu bisa minta datamu dihapus. Profil, level, dan riwayat obrolan bakal dibersihkan dari penyimpanan bot.</p>
-        </div>
-        <div class="col">
-          <h3>Keluar server</h3>
-          <p>Nggak setuju sama kebijakan ini? Kamu bebas keluar server kapan aja. Sebagian data ikut terhapus, sesuai bab penyimpanan di bawah.</p>
-        </div>
-      </div>
-      <p style="margin-top:2rem">Satu pengecualian: catatan moderasi yang masih relevan buat keamanan server bisa disimpan lebih lama, misalnya riwayat pelanggaran berat. Itu pun cuma bisa diakses staff.</p>
+    <section class="chapter reveal" id="kontak">
+      <span class="ghost">09</span>
+      <div class="eyebrow">Bab 09</div>
+      <h2>Perubahan &amp; kontak <button class="copylink" data-target="kontak" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <p class="lede">Dokumen ini hidup — bakal diupdate kalau fiturnya berubah.</p>
+      <p>Perubahan signifikan diumumin di channel pengumuman server, dan tanggal "Berlaku" di atas ikut diperbarui. Ada pertanyaan soal privasi? Hubungi <strong>owner / staff server ADIP RMX</strong> lewat channel yang tersedia.</p>
     </section>
 
-    <section class="ch rv" id="retensi">
-      <div class="ghost" aria-hidden="true">08</div>
-      <div class="ch-head">
-        <h2>Berapa lama disimpan</h2>
-        <button class="copylink" data-target="retensi" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Data disimpan selama masih ada gunanya. Lewat dari itu, dibuang.</p>
-      <div class="cols3">
-        <div class="col">
-          <h3>Selama kamu di sini</h3>
-          <p>Profil, level, XP, dan riwayat obrolan AI disimpan selama kamu masih jadi member. Itu yang bikin semua fiturnya jalan.</p>
-        </div>
-        <div class="col">
-          <h3>Kalau kamu keluar</h3>
-          <p>Profil dan level terhapus. Log moderasi disimpan maksimal 1 tahun buat keamanan, riwayat obrolan AI maksimal 30 hari.</p>
-        </div>
-        <div class="col">
-          <h3>Backup server</h3>
-          <p>Backup konfigurasi server dibuat berkala dan disimpan terbatas, maksimal 30 hari, khusus buat pemulihan kalau ada kerusakan.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="ch rv" id="kontak">
-      <div class="ghost" aria-hidden="true">09</div>
-      <div class="ch-head">
-        <h2>Kontak</h2>
-        <button class="copylink" data-target="kontak" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <p class="clede">Ada yang kurang jelas, atau mau pakai hak kamu di bab 07? Ngomong aja.</p>
-      <p>Semua pertanyaan soal privasi bisa disampaikan langsung ke <strong>Adip</strong>, pemilik server ADIP RMX, lewat Discord. Bisa lewat DM, bisa juga lewat channel bantuan di server. Permintaan soal data bakal ditangani langsung, nggak dipingpong.</p>
-      <p>Makasih udah baca sampai sini. Kebijakan ini bakal diperbarui kalau ada fitur baru yang ngaruh ke data member, dan setiap perubahan selalu diumumkan di server.</p>
-    </section>
-
-    <section class="ch rv" id="faq">
-      <div class="ch-head">
-        <h2>Sering ditanyakan</h2>
-        <button class="copylink" data-target="faq" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
-      </div>
-      <div style="margin-top:1.6rem">
+    <section class="chapter reveal" id="faq">
+      <span class="ghost">?</span>
+      <div class="eyebrow">Tanya Jawab</div>
+      <h2>Yang sering ditanyain <button class="copylink" data-target="faq" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
+      <div class="faq">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Obrolan gue di ruang pribadi beneran nggak dibaca staff?<span class="pm">+</span></button>
-          <div class="faq-a"><p>Member dan staff biasa nggak bisa lihat sama sekali, channelnya dikunci dari semua role. Ireng juga nggak nyatet obrolan ruang pribadi ke log mana pun. Satu-satunya yang secara teknis masih bisa membuka channel adalah pemilik server dan pemegang Administrator, karena itu batasan dari Discord sendiri. Tapi Ireng tetap cuma ngerespons kamu, pemilik ruangnya.</p></div>
+          <button class="faq-q" aria-expanded="false">Ireng bisa baca DM gue?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Nggak. Ireng cuma baca pesan di channel server dan di ruang pribadi yang kamu buat sendiri. DM itu wilayah Discord, bukan wilayah bot.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Data gue dijual atau dipakai iklan nggak?<span class="pm">+</span></button>
-          <div class="faq-a"><p>Nggak. Nggak dijual, nggak dibagikan ke pengiklan, nggak dipakai buat ngiklan. Data cuma dipakai buat ngejalanin fitur server ADIP RMX, sesuai bab 04 halaman ini.</p></div>
+          <button class="faq-q" aria-expanded="false">Data gue dijual ke pengiklan?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Nggak, dan nggak akan. Satu-satunya yang nerima pesanmu di luar Discord itu penyedia AI — murni biar fitur chatnya jalan, bukan buat iklan.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Pesan gue dikirim ke AI luar?<span class="pm">+</span></button>
-          <div class="faq-a"><p>Cuma pesan yang kamu kirim ke Ireng di ruang pribadi. Isi pesan dan konteks obrolannya diteruskan ke penyedia model AI, utamanya Google Gemini, buat diolah jadi jawaban. Chat kamu di channel publik nggak dikirim ke AI mana pun.</p></div>
+          <button class="faq-q" aria-expanded="false">Kenapa chat AI gue dikirim ke Google?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Karena otaknya Ireng jalan di model AI Google Gemini (dengan cadangan kalau penuh). Tanpa itu, nggak ada yang jawab. Yang dikirim cuma isi pesan + username — dan obrolan ruang pribadi nggak disimpen permanen.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Gimana cara minta data gue dihapus?<span class="pm">+</span></button>
-          <div class="faq-a"><p>Hubungi Adip, pemilik server, lewat Discord dan bilang aja mau minta data dihapus. Profil, level, dan riwayat obrolan kamu bakal dibersihkan dari penyimpanan bot. Detail lengkapnya ada di bab 07.</p></div>
+          <button class="faq-q" aria-expanded="false">Staff bisa ngintip ruang pribadi gue?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Staff biasa dan member lain nggak bisa lihat. Yang secara teknis masih bisa cuma pemilik server / pemegang Administrator (batasan Discord), tapi bot tidak akan melayani mereka dan tidak ada jejak chat yang bisa dibaca.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Gimana cara hapus semua data gue?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Chat owner/staff ADIP RMX, bilang mau hapus data. Nanti ditindaklanjuti. Leave dari server juga otomatis nyetop pengumpulan data baru.</p></div>
         </div>
       </div>
     </section>
-
   </main>
 </div>
 
 <footer>
-  <div class="foot-in">
-    <div class="foot-brand">
-      <div class="fb-name">Ire<i>ng</i></div>
-      <p>Bot resmi server ADIP RMX. Musik, mabar, dan obrolan yang dijaga rapi.</p>
-    </div>
-    <div class="foot-col">
-      <div class="fh">Dokumen</div>
-      <a href="privacy-policy.html">Kebijakan Privasi</a>
-      <a href="terms-of-service.html">Syarat Layanan</a>
-    </div>
-    <div class="foot-col">
-      <div class="fh">Kontak</div>
-      <span>Adip, pemilik server</span>
-      <span>Lewat Discord di ADIP RMX</span>
-    </div>
+  <div class="mono">I</div>
+  <p>© 2026 ADIP RMX · Ireng — the mind behind ADIP RMX</p>
+  <div class="sealrow">
+    <span class="seal">Dokumen <b>v2.0</b></span>
+    <span class="seal">Berlaku <b>1 Okt 2026</b></span>
   </div>
-  <div class="foot-base">
-    <span>© 2026 ADIP RMX</span>
-    <span>Ditulis buat manusia, bukan buat robot.</span>
-  </div>
+  <nav>
+    <a href="privacy-policy.html">Kebijakan Privasi</a>
+    <a href="terms-of-service.html">Syarat Layanan</a>
+    <a href="#mengapa">Kembali ke atas</a>
+  </nav>
 </footer>
 
 <div id="toast" role="status"></div>
-<button id="toTop" aria-label="Kembali ke atas">↑</button>
-<script src="script.js?v=3"></script>
+<button id="topBtn" title="Ke atas" aria-label="Kembali ke atas">↑</button>
+<script src="script.js?v=2"></script>
 </body>
 </html>
