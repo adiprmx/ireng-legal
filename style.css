@@ -302,3 +302,9 @@ footer nav a:hover{color:var(--gold-hi)}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+
+/* ——— pengalih bahasa ——— */
+.langswitch{display:inline-flex;gap:4px;margin-top:14px;padding:4px;border:1px solid var(--hair);border-radius:999px;background:rgba(10,10,8,.5);backdrop-filter:blur(8px)}
+.langswitch a{padding:6px 16px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:800;letter-spacing:.08em;transition:color .25s,background .25s}
+.langswitch a:hover{color:var(--gold-hi)}
+.langswitch a.active{background:rgba(212,175,55,.14);color:var(--gold-hi)}
