@@ -44,6 +44,9 @@
   var spy = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
+        /* Mode Cepat: bab yang tertutup jangan merebut status aktif —
+           bab yang sedang terbuka yang berkuasa atas rail + dropdown. */
+        if (typeof viewMode !== "undefined" && viewMode === "cepat" && e.target.classList.contains("is-closed")) return;
         links.forEach(function (l) {
           l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id);
         });
@@ -152,7 +155,7 @@
       if (viewMode !== "cepat") return;
       var willOpen = chapter.classList.contains("is-closed");
       chapters.forEach(function (other) { setChapterOpen(other, other === chapter ? willOpen : false); });
-      if (willOpen) window.requestAnimationFrame(function () { refreshFaqHeights(chapter); });
+      if (willOpen) { markActive(chapter.id); window.requestAnimationFrame(function () { refreshFaqHeights(chapter); }); }
     });
   });
 
