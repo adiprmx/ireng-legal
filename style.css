@@ -304,7 +304,11 @@ footer nav a:hover{color:var(--gold-hi)}
 }
 
 /* ——— pengalih bahasa ——— */
-.langswitch{display:inline-flex;gap:4px;margin-top:14px;padding:4px;border:1px solid var(--hair);border-radius:999px;background:rgba(10,10,8,.5);backdrop-filter:blur(8px)}
+.langswitch{position:absolute;top:20px;right:22px;z-index:6;display:inline-flex;gap:4px;padding:4px;border:1px solid var(--hair);border-radius:999px;background:rgba(10,10,8,.5);backdrop-filter:blur(8px)}
 .langswitch a{padding:6px 16px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:800;letter-spacing:.08em;transition:color .25s,background .25s}
 .langswitch a:hover{color:var(--gold-hi)}
 .langswitch a.active{background:rgba(212,175,55,.14);color:var(--gold-hi)}
+@media (max-width:560px){
+  .langswitch{top:12px;right:12px;padding:3px}
+  .langswitch a{padding:5px 12px;font-size:.78rem}
+}
