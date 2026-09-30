@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <div id="progress"></div>
@@ -31,8 +31,27 @@
       <a href="terms-of-service.html" class="active">Syarat Layanan</a>
     </nav>
   </div>
-  <div class="scrollcue"><span>Gulir</span><span class="rail"></span></div>
 </header>
+
+<div class="quickbar" id="quickbar">
+  <div class="quickbar-inner">
+    <div class="quick-search">
+      <label class="sr-only" for="chapterSearch">Cari topik di halaman ini</label>
+      <span class="quick-icon" aria-hidden="true">⌕</span>
+      <input id="chapterSearch" type="search" placeholder="Cari topik: aturan, AI, ban…" autocomplete="off">
+      <button id="clearSearch" class="clear-search" type="button" aria-label="Hapus pencarian" hidden>×</button>
+    </div>
+    <div class="quick-jump">
+      <label for="chapterJump">Lompat ke</label>
+      <select id="chapterJump" aria-label="Lompat ke bab"></select>
+    </div>
+    <div class="view-switch" role="group" aria-label="Mode baca">
+      <button type="button" data-view="cepat" class="active" aria-pressed="true">Cepat</button>
+      <button type="button" data-view="penuh" aria-pressed="false">Baca penuh</button>
+    </div>
+  </div>
+  <div class="quick-results" id="quickResults" hidden></div>
+</div>
 
 <div class="shell">
   <nav class="rail" aria-label="Daftar bab">
@@ -51,6 +70,11 @@
   </nav>
 
   <main>
+    <section class="summary-strip" aria-label="Ringkasan cepat">
+      <a class="summary-card" href="#aturan"><span>Aturan</span><strong>Jangan exploit</strong><small>Spam, bypass, dan penyalahgunaan fitur dilarang.</small></a>
+      <a class="summary-card" href="#ai"><span>AI</span><strong>Bisa salah</strong><small>Jangan pakai jawaban bot buat keputusan penting.</small></a>
+      <a class="summary-card" href="#moderasi"><span>Sanksi</span><strong>Bertahap</strong><small>Dari peringatan sampai ban, sesuai pelanggarannya.</small></a>
+    </section>
     <section class="chapter reveal" id="penerimaan">
       <span class="ghost">01</span>
       <div class="eyebrow">Bab 01</div>
@@ -196,6 +220,6 @@
 
 <div id="toast" role="status"></div>
 <button id="topBtn" title="Ke atas" aria-label="Kembali ke atas">↑</button>
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
