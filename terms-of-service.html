@@ -3,199 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syarat Layanan — Ireng · ADIP RMX</title>
+<title>Syarat Layanan | Ireng, ADIP RMX</title>
 <meta name="description" content="Syarat Layanan Ireng: aturan main yang jelas dan adil buat semua orang di server Discord komunitas ADIP RMX.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-<div id="progress"></div>
-<div id="glow"></div>
 
-<header class="hero">
-  <canvas id="dust"></canvas>
-  <div class="watermark">§</div>
-  <div class="hero-inner">
-    <span class="kicker">🐈‍⬛ ADIP RMX · Dokumen Resmi</span>
-    <h1>Syarat <span class="shine">Layanan</span></h1>
-    <p class="lede">Bukan bacaan paling seru di dunia, tapi ini aturan mainnya. Baca sekali, main tenang seterusnya.</p>
-    <div class="seals">
-      <span class="seal"><span class="dot"></span>Berlaku <b>1 Oktober 2026</b></span>
-      <span class="seal"><span class="dot"></span>Server <b>ADIP RMX</b></span>
-      <span class="seal"><span class="dot"></span>Versi <b>2.0</b></span>
-    </div>
-    <nav class="doctabs" aria-label="Dokumen legal">
-      <a href="privacy-policy.html">Kebijakan Privasi</a>
-      <a href="terms-of-service.html" class="active">Syarat Layanan</a>
-    </nav>
-  </div>
-  <div class="scrollcue"><span>Gulir</span><span class="rail"></span></div>
+<div id="progress"></div>
+
+<header class="topbar">
+  <a class="brand" href="privacy-policy.html">
+    <span class="bname">Ire<i>ng</i></span>
+    <span class="bsub">ADIP RMX</span>
+  </a>
+  <nav class="docnav">
+    <a href="privacy-policy.html">Privasi</a>
+    <a href="terms-of-service.html" class="on">Syarat Layanan</a>
+  </nav>
 </header>
 
-<div class="shell">
-  <nav class="rail" aria-label="Daftar bab">
-    <h3>Daftar Bab</h3>
-    <a href="#penerimaan"><span class="n">01</span>Dengan main, kamu setuju</a>
-    <a href="#layanan"><span class="n">02</span>Ireng itu apa sih</a>
-    <a href="#aturan"><span class="n">03</span>Aturan mainnya</a>
-    <a href="#ruang"><span class="n">04</span>Ruang pribadi</a>
-    <a href="#ai"><span class="n">05</span>AI-nya bisa salah</a>
-    <a href="#moderasi"><span class="n">06</span>Kalau bandel</a>
-    <a href="#ip"><span class="n">07</span>Karya &amp; logo</a>
-    <a href="#tanggung"><span class="n">08</span>Gratis, jaminannya seadanya</a>
-    <a href="#perubahan"><span class="n">09</span>Kalau syarat berubah</a>
-    <a href="#kontak"><span class="n">10</span>Kontak</a>
-    <a href="#faq"><span class="n">?</span>FAQ</a>
-  </nav>
+<div class="hero">
+  <div class="hero-copy">
+    <p class="kicker rv">Dokumen resmi server ADIP RMX</p>
+    <h1 class="rv">Syarat <em>Layanan</em></h1>
+    <p class="lede rv">Aturan main di ADIP RMX, ditulis singkat dan jujur. Baca sekali, main tenang seterusnya.</p>
+    <div class="hero-cta rv">
+      <a class="btn" href="#penerimaan">Mulai baca</a>
+      <a class="link-arrow" href="#faq">Sering ditanyakan</a>
+    </div>
+  </div>
+  <figure class="hero-fig rv" aria-hidden="true">
+    <div class="frame"><img src="hero-texture.jpg" alt="" fetchpriority="high"></div>
+  </figure>
+</div>
+
+<div class="facts">
+  <div class="facts-in rv">
+    <div class="fact"><div class="fl">Berlaku sejak</div><div class="fv">1 Oktober 2026</div></div>
+    <div class="fact"><div class="fl">Berlaku untuk</div><div class="fv">Server ADIP RMX</div></div>
+    <div class="fact"><div class="fl">Bahasa dokumen</div><div class="fv">Bahasa Indonesia</div></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="rail">
+    <nav>
+      <a href="#penerimaan"><span class="rn">01</span>Penerimaan</a>
+      <a href="#layanan"><span class="rn">02</span>Layanannya apa aja</a>
+      <a href="#aturan"><span class="rn">03</span>Aturan main</a>
+      <a href="#ruang"><span class="rn">04</span>Ruang pribadi</a>
+      <a href="#ai"><span class="rn">05</span>Soal AI</a>
+      <a href="#moderasi"><span class="rn">06</span>Moderasi</a>
+      <a href="#ip"><span class="rn">07</span>Karya dan remix</a>
+      <a href="#tanggung"><span class="rn">08</span>Tanggung jawab</a>
+      <a href="#perubahan"><span class="rn">09</span>Perubahan syarat</a>
+      <a href="#kontak"><span class="rn">10</span>Kontak</a>
+      <a href="#faq"><span class="rn">11</span>Sering ditanyakan</a>
+    </nav>
+  </aside>
 
   <main>
-    <section class="chapter reveal" id="penerimaan">
-      <span class="ghost">01</span>
-      <div class="eyebrow">Bab 01</div>
-      <h2>Dengan main, kamu setuju <button class="copylink" data-target="penerimaan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Nggak ada yang baca syarat sampai habis — tapi intinya satu: pakai Ireng berarti setuju sama aturan main di halaman ini.</p>
-      <p>Dengan menjalankan command Ireng, ngobrol di ruang pribadi, atau sekadar jadi member server <strong>ADIP RMX</strong>, kamu dianggap sudah baca dan setuju sama syarat di sini, plus <a href="privacy-policy.html">Kebijakan Privasi</a> dan aturan server. Kalau nggak setuju, solusinya gampang: jangan pakai layanannya.</p>
-      <p>Kamu juga wajib memenuhi syarat usia minimum Discord dan mematuhi <a href="https://discord.com/terms">Terms of Service Discord</a>.</p>
+
+    <section class="ch rv" id="penerimaan">
+      <div class="ghost" aria-hidden="true">01</div>
+      <div class="ch-head">
+        <h2>Dengan main, kamu setuju</h2>
+        <button class="copylink" data-target="penerimaan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Nggak ada yang baca syarat sampai habis, tapi intinya satu: pakai Ireng berarti setuju sama aturan main di halaman ini.</p>
+      <p class="dropcap">Dengan menjalankan command Ireng, ngobrol di ruang pribadi, atau sekadar jadi member server <strong>ADIP RMX</strong>, kamu dianggap sudah baca dan setuju sama syarat di sini, plus <a href="privacy-policy.html">Kebijakan Privasi</a> dan aturan server. Kalau nggak setuju, solusinya gampang: jangan pakai layanannya.</p>
+      <p>Semua aktivitas di sini juga tunduk ke <a href="https://discord.com/terms">Terms of Service Discord</a>, karena layanannya memang jalan di platform Discord.</p>
+      <div class="note">
+        <div class="nl">Catatan</div>
+        <p>Dokumen ini ditulis pakai bahasa sehari-hari biar gampang dipahami. Isinya bukan nasihat hukum, dan bukan pengganti aturan resmi dari Discord.</p>
+      </div>
     </section>
 
-    <section class="chapter reveal" id="layanan">
-      <span class="ghost">02</span>
-      <div class="eyebrow">Bab 02</div>
-      <h2>Ireng itu apa sih <button class="copylink" data-target="layanan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Bot komunitas buat ADIP RMX: jaga ketertiban, diajak ngobrol, dan bikin servernya hidup. Ini daftar kerjaannya.</p>
-      <ul>
-        <li>Moderasi otomatis &amp; manual (anti-spam, anti-judol, anti-toxic, anti-raid).</li>
-        <li>Ngobrol AI di ruang pribadi lewat <em>/ruangpribadi</em>.</li>
-        <li>Sistem level/XP, kartu member, dan achievement.</li>
-        <li>Fitur komunitas: cari partner ft, saran, event, dan lainnya.</li>
-      </ul>
-      <p>Fitur bisa berubah, bertambah, atau berhenti sewaktu-waktu ngikutin perkembangan server. Server ini hidup, dan botnya ikut hidup.</p>
+    <section class="ch rv" id="layanan">
+      <div class="ghost" aria-hidden="true">02</div>
+      <div class="ch-head">
+        <h2>Ireng itu apa sih</h2>
+        <button class="copylink" data-target="layanan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Bot komunitas buat ADIP RMX: jaga ketertiban, diajak ngobrol, dan bikin servernya hidup. Ini daftar kerjaannya.</p>
+      <div class="defs">
+        <div class="def">
+          <div class="dn">Moderasi</div>
+          <p>Moderasi otomatis dan manual, termasuk anti-spam, anti-judol, anti-toxic, dan anti-raid.</p>
+        </div>
+        <div class="def">
+          <div class="dn">Ngobrol AI</div>
+          <p>Ngobrol sama AI di ruang pribadi lewat perintah <em>/ruangpribadi</em>.</p>
+        </div>
+        <div class="def">
+          <div class="dn">Level dan XP</div>
+          <p>Sistem level dan XP, kartu member, dan achievement buat ngerayain aktivitas kamu di server.</p>
+        </div>
+        <div class="def">
+          <div class="dn">Fitur komunitas</div>
+          <p>Cari partner ft, saran, event, dan fitur komunitas lainnya.</p>
+        </div>
+      </div>
+      <p style="margin-top:2rem">Fitur bisa berubah, bertambah, atau berhenti sewaktu-waktu ngikutin perkembangan server. Server ini hidup, dan botnya ikut hidup.</p>
     </section>
 
-    <section class="chapter reveal" id="aturan">
-      <span class="ghost">03</span>
-      <div class="eyebrow">Bab 03</div>
-      <h2>Aturan mainnya <button class="copylink" data-target="aturan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Nggak ribet kok: jangan ngerusak, jangan nyalahgunain, jangan ngaku-ngaku jadi orang lain.</p>
+    <section class="ch rv" id="aturan">
+      <div class="ghost" aria-hidden="true">03</div>
+      <div class="ch-head">
+        <h2>Aturan mainnya</h2>
+        <button class="copylink" data-target="aturan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Nggak ribet kok: jangan ngerusak, jangan nyalahgunain, jangan ngaku-ngaku jadi orang lain.</p>
       <ul>
         <li><strong>Dilarang nge-bypass</strong> batasan bot: spam command, exploit bug, atau ngakalin cooldown.</li>
         <li><strong>Dilarang nyalahgunain</strong> fitur otomatis (auto-responder, report, saran) buat ganggu orang lain.</li>
-        <li><strong>Dilarang nyebar</strong> konten ilegal, judol, SARA, atau konten yang melanggar aturan server &amp; Discord lewat fitur bot.</li>
-        <li><strong>Dilarang ngaku-ngaku</strong> jadi staff/owner atau nyoba akses command yang bukan hakmu. Command moderasi &amp; konfigurasi khusus staff — titik.</li>
+        <li><strong>Dilarang nyebar</strong> konten ilegal, judol, SARA, atau konten yang melanggar aturan server dan Discord lewat fitur bot.</li>
+        <li><strong>Dilarang ngaku-ngaku</strong> jadi staff atau owner, atau nyoba akses command yang bukan hakmu. Command moderasi dan konfigurasi khusus staff.</li>
         <li><strong>Dilarang jual-beli</strong> akses, badge, atau data yang berkaitan sama bot.</li>
+        <li><strong>Nemu bug?</strong> Lapor ke staff, jangan dieksploitasi. Yang lapor beneran biasanya malah diapresiasi.</li>
       </ul>
-      <div class="note"><p>💡 <strong>Nemu bug?</strong> Lapor ke staff, jangan dieksploitasi. Yang lapor beneran biasanya malah diapresiasi.</p></div>
+      <div class="note">
+        <div class="nl">Soal umur</div>
+        <p>Buat pakai Ireng dan server ADIP RMX, kamu wajib memenuhi syarat usia minimum Discord. Kalau belum memenuhi, jangan pakai layanannya dulu.</p>
+      </div>
     </section>
 
-    <section class="chapter reveal" id="ruang">
-      <span class="ghost">04</span>
-      <div class="eyebrow">Bab 04</div>
-      <h2>Ruang pribadi <button class="copylink" data-target="ruang" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Ruangmu, aturanmu — selama masih masuk akal.</p>
+    <section class="ch rv" id="ruang">
+      <div class="ghost" aria-hidden="true">04</div>
+      <div class="ch-head">
+        <h2>Ruang pribadi</h2>
+        <button class="copylink" data-target="ruang" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Ruangmu, aturanmu, selama masih masuk akal.</p>
+      <p>Satu user cuma boleh punya satu ruang pribadi, dan ruang itu khusus buat pemiliknya. Jangan bagi-bagi akses, maksa masuk, atau ngintip ruang orang lain.</p>
+      <p>Isi obrolanmu di ruang pribadi adalah tanggung jawabmu sendiri. Aturan server tetap berlaku di sana, sama kayak di channel lain.</p>
+      <figure class="oath">
+        <span class="qm" aria-hidden="true">&ldquo;</span>
+        <blockquote>Satu user, satu ruang. Ruang itu khusus buat pemiliknya, bukan buat dibagi-bagi atau diintip orang lain.</blockquote>
+        <figcaption>Komitmen ruang pribadi, ADIP RMX</figcaption>
+      </figure>
+      <div class="note">
+        <div class="nl">Catatan penting</div>
+        <p>Ruang bisa dihapus owner atau staff kalau disalahgunakan atau dipakai buat melanggar aturan.</p>
+      </div>
+    </section>
+
+    <section class="ch rv" id="ai">
+      <div class="ghost" aria-hidden="true">05</div>
+      <div class="ch-head">
+        <h2>AI-nya bisa salah</h2>
+        <button class="copylink" data-target="ai" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Ireng pinter, tapi bukan cenayang. Jangan taruhan keputusan penting ke jawaban bot.</p>
+      <p>Jawaban AI itu dibuat otomatis dan bisa aja salah, ngaco, atau nggak lengkap. Itu sifat bawaannya, bukan bug. Anggap jawaban bot sebagai bahan obrolan, bukan kepastian.</p>
       <ul>
-        <li>Satu user = satu ruang pribadi. Ruang itu khusus buat pemiliknya.</li>
-        <li>Jangan bagi-bagi akses, maksa masuk, atau ngintip ruang orang lain.</li>
-        <li>Isi obrolanmu tanggung jawabmu sendiri — aturan server tetap berlaku di sana.</li>
-        <li>Ruang bisa dihapus owner/staff kalau disalahgunakan atau melanggar aturan.</li>
+        <li><strong>Jangan jadiin satu-satunya rujukan.</strong> Buat keputusan penting, misalnya soal kesehatan, hukum, atau keuangan, selalu cek ke sumber yang beneran.</li>
+        <li><strong>Keputusan akhir tetap di tanganmu.</strong> Tim ADIP RMX nggak bertanggung jawab atas keputusan yang diambil murni dari jawaban bot.</li>
       </ul>
     </section>
 
-    <section class="chapter reveal" id="ai">
-      <span class="ghost">05</span>
-      <div class="eyebrow">Bab 05</div>
-      <h2>AI-nya bisa salah <button class="copylink" data-target="ai" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Ireng pinter, tapi bukan cenayang. Jangan taruhan keputusan penting ke jawaban bot.</p>
-      <div class="oath">
-        <p>Jawaban AI itu dibuat otomatis dan bisa aja salah, ngaco, atau nggak lengkap — itu sifatnya, bukan bug.</p>
-        <cite>— Fakta yang perlu dipegang</cite>
+    <section class="ch rv" id="moderasi">
+      <div class="ghost" aria-hidden="true">06</div>
+      <div class="ch-head">
+        <h2>Kalau bandel</h2>
+        <button class="copylink" data-target="moderasi" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
       </div>
-      <p>Jangan jadiin satu-satunya rujukan buat keputusan penting (kesehatan, hukum, keuangan, dll). Tim ADIP RMX nggak bertanggung jawab atas keputusan yang diambil murni dari jawaban bot.</p>
-    </section>
-
-    <section class="chapter reveal" id="moderasi">
-      <span class="ghost">06</span>
-      <div class="eyebrow">Bab 06</div>
-      <h2>Kalau bandel <button class="copylink" data-target="moderasi" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Sistemnya bertahap, bukan sekali salah langsung dibuang. Tapi ada batasnya.</p>
-      <p>Pelanggaran syarat ini atau aturan server bisa berujung: <strong>peringatan → timeout → kick → ban</strong>, ngikutin tingkat pelanggarannya. Sistem peringatan berjalan bertahap dan tercatat; keputusan staff bersifat final. Kalau merasa kena tindakan yang keliru, sampaikan lewat jalur banding yang disediakan server.</p>
-    </section>
-
-    <section class="chapter reveal" id="ip">
-      <span class="ghost">07</span>
-      <div class="eyebrow">Bab 07</div>
-      <h2>Karya &amp; logo <button class="copylink" data-target="ip" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Karya lu punya lu. Logo server punya server. Sesimpel itu.</p>
-      <p>Logo, nama, dan identitas visual <strong>ADIP RMX</strong> serta Ireng adalah milik owner server — jangan dipakai ulang di luar server tanpa izin. Karya yang kamu bagikan di server (remix, artwork, dll) tetap milikmu; kamu cuma ngasih izin buat ditampilin di dalam server.</p>
-    </section>
-
-    <section class="chapter reveal" id="tanggung">
-      <span class="ghost">08</span>
-      <div class="eyebrow">Bab 08</div>
-      <h2>Gratis, jaminannya seadanya <button class="copylink" data-target="tanggung" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Ireng diusahakan online terus, tapi ini layanan komunitas gratis — bukan layanan berbayar dengan SLA.</p>
-      <p>Layanan diberikan <strong>"apa adanya"</strong>: bisa aja downtime buat maintenance, update, atau hal di luar kendali (gangguan host, Discord, internet). Nggak ada garansi uptime 100%, dan kami nggak bertanggung jawab atas kerugian akibat gangguan layanan atau kehilangan progres (XP/badge) karena insiden teknis.</p>
-    </section>
-
-    <section class="chapter reveal" id="perubahan">
-      <span class="ghost">09</span>
-      <div class="eyebrow">Bab 09</div>
-      <h2>Kalau syarat berubah <button class="copylink" data-target="perubahan" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Syarat ini hidup — bakal diupdate kalau servernya berkembang.</p>
-      <p>Syarat bisa diupdate sewaktu-waktu. Perubahan signifikan diumumin di channel pengumuman server, dan tanggal "Berlaku" di atas diperbarui. Lanjut pakai Ireng setelah update = setuju sama versi baru.</p>
-    </section>
-
-    <section class="chapter reveal" id="kontak">
-      <span class="ghost">10</span>
-      <div class="eyebrow">Bab 10</div>
-      <h2>Kontak <button class="copylink" data-target="kontak" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <p class="lede">Masih ada yang ganjel setelah baca semua ini?</p>
-      <p>Hubungi <strong>owner / staff server ADIP RMX</strong> lewat channel yang tersedia di server. Pertanyaan yang sopan selalu dijawab.</p>
-    </section>
-
-    <section class="chapter reveal" id="faq">
-      <span class="ghost">?</span>
-      <div class="eyebrow">Tanya Jawab</div>
-      <h2>Yang sering ditanyain <button class="copylink" data-target="faq" title="Salin tautan bab" aria-label="Salin tautan bab">§</button></h2>
-      <div class="faq">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Kalau gue nggak setuju sama syaratnya gimana?<span class="arrow">▾</span></button>
-          <div class="faq-a"><p>Sesimpel: jangan pakai Ireng. Sebagian besar syarat ini sebenarnya cerminan aturan server — jadi selama kamu ikut aturan server, kamu udah aman.</p></div>
+      <p class="clede">Sistemnya bertahap, bukan sekali salah langsung dibuang. Tapi ada batasnya.</p>
+      <div class="cols3">
+        <div class="col">
+          <h3>Teguran</h3>
+          <p>Pelanggaran syarat ini atau aturan server mulai dari peringatan. Sistem peringatannya berjalan bertahap dan tercatat, jadi staff bisa lihat riwayatnya.</p>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Jawaban AI-nya salah, gue rugi. Siapa tanggung jawab?<span class="arrow">▾</span></button>
-          <div class="faq-a"><p>AI bisa ngaco — itu udah ditulis jelas di Bab 05. Buat hal penting, selalu cek ke sumber beneran. Keputusan akhir tetap di tanganmu.</p></div>
+        <div class="col">
+          <h3>Timeout</h3>
+          <p>Kalau pelanggaran diulang atau lebih berat, sanksinya naik ke timeout. Masih bandel juga, bisa lanjut ke kick dari server.</p>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Gue kena timeout/ban, bisa banding?<span class="arrow">▾</span></button>
-          <div class="faq-a"><p>Bisa, lewat jalur banding yang disediakan server. Keputusan staff final, tapi banding yang sopan dan masuk akal selalu dibaca.</p></div>
+        <div class="col">
+          <h3>Ban permanen</h3>
+          <p>Pelanggaran berat atau pengulangan yang terus-menerus berujung ban permanen, ngikutin tingkat pelanggarannya.</p>
         </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Botnya mati, XP gue ilang. Gimana?<span class="arrow">▾</span></button>
-          <div class="faq-a"><p>Ada sistem backup berkala, jadi biasanya aman. Tapi sesuai Bab 08, nggak ada garansi 100% — layanan ini gratis dan apa adanya.</p></div>
+      </div>
+      <p style="margin-top:2rem">Keputusan staff bersifat final. Kalau merasa kena tindakan yang keliru, sampaikan lewat jalur banding yang disediakan server.</p>
+    </section>
+
+    <section class="ch rv" id="ip">
+      <div class="ghost" aria-hidden="true">07</div>
+      <div class="ch-head">
+        <h2>Karya &amp; logo</h2>
+        <button class="copylink" data-target="ip" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Karya lu punya lu. Logo server punya server. Sesimpel itu.</p>
+      <div class="defs">
+        <div class="def">
+          <div class="dn">Karya kamu</div>
+          <p>Karya yang kamu bagikan di server, misalnya remix dan artwork, tetap milikmu. Kamu cuma ngasih izin buat karya itu ditampilkan di dalam server.</p>
+        </div>
+        <div class="def">
+          <div class="dn">Karya orang lain</div>
+          <p>Logo, nama, dan identitas visual ADIP RMX serta Ireng adalah milik owner server. Jangan dipakai ulang di luar server tanpa izin.</p>
         </div>
       </div>
     </section>
+
+    <section class="ch rv" id="tanggung">
+      <div class="ghost" aria-hidden="true">08</div>
+      <div class="ch-head">
+        <h2>Gratis, jaminannya seadanya</h2>
+        <button class="copylink" data-target="tanggung" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Ireng diusahakan online terus, tapi ini layanan komunitas gratis, bukan layanan berbayar dengan SLA.</p>
+      <p>Layanan diberikan <strong>"apa adanya"</strong>. Ireng bisa aja downtime buat maintenance, update, atau hal di luar kendali kami, misalnya gangguan host, Discord, atau internet.</p>
+      <p>Nggak ada garansi uptime 100%, dan kami nggak bertanggung jawab atas kerugian akibat gangguan layanan atau kehilangan progres (XP dan badge) karena insiden teknis.</p>
+    </section>
+
+    <section class="ch rv" id="perubahan">
+      <div class="ghost" aria-hidden="true">09</div>
+      <div class="ch-head">
+        <h2>Kalau syarat berubah</h2>
+        <button class="copylink" data-target="perubahan" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Syarat ini hidup, bakal diupdate kalau servernya berkembang.</p>
+      <p>Syarat bisa diupdate sewaktu-waktu. Perubahan signifikan diumumkan di channel pengumuman server, dan tanggal berlaku di halaman ini diperbarui.</p>
+      <p>Lanjut pakai Ireng setelah update berarti kamu setuju sama versi barunya.</p>
+    </section>
+
+    <section class="ch rv" id="kontak">
+      <div class="ghost" aria-hidden="true">10</div>
+      <div class="ch-head">
+        <h2>Kontak</h2>
+        <button class="copylink" data-target="kontak" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <p class="clede">Masih ada yang ganjel setelah baca semua ini?</p>
+      <p>Hubungi <strong>owner atau staff server ADIP RMX</strong> lewat channel yang tersedia di server. Pertanyaan yang sopan selalu dijawab.</p>
+    </section>
+
+    <section class="ch rv" id="faq">
+      <div class="ch-head">
+        <h2>Sering ditanyakan</h2>
+        <button class="copylink" data-target="faq" title="Salin tautan ke bab ini" aria-label="Salin tautan ke bab ini">§</button>
+      </div>
+      <div style="margin-top:1.6rem">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Kalau gue nggak setuju sama syaratnya gimana?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Sesimpel itu: jangan pakai Ireng. Sebagian besar syarat ini sebenarnya cerminan aturan server di bab 03, jadi selama kamu ikut aturan server, kamu udah aman.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Jawaban AI-nya salah, gue rugi. Siapa tanggung jawab?<span class="pm">+</span></button>
+          <div class="faq-a"><p>AI bisa ngaco, dan itu udah ditulis jelas di bab 05. Buat hal penting, selalu cek ke sumber beneran. Keputusan akhir tetap di tanganmu.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Gue kena timeout/ban, bisa banding?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Bisa, lewat jalur banding yang disediakan server. Keputusan staff final, tapi banding yang sopan dan masuk akal selalu dibaca. Detail soal sanksi bertahapnya ada di bab 06.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Botnya mati, XP gue ilang. Gimana?<span class="pm">+</span></button>
+          <div class="faq-a"><p>Ada sistem backup berkala, jadi biasanya aman. Tapi sesuai bab 08, nggak ada garansi 100%. Layanan ini gratis dan apa adanya.</p></div>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="mono">I</div>
-  <p>© 2026 ADIP RMX · Ireng — the mind behind ADIP RMX</p>
-  <div class="sealrow">
-    <span class="seal">Dokumen <b>v2.0</b></span>
-    <span class="seal">Berlaku <b>1 Okt 2026</b></span>
+  <div class="foot-in">
+    <div class="foot-brand">
+      <div class="fb-name">Ire<i>ng</i></div>
+      <p>Bot resmi server ADIP RMX. Musik, mabar, dan obrolan yang dijaga rapi.</p>
+    </div>
+    <div class="foot-col">
+      <div class="fh">Dokumen</div>
+      <a href="privacy-policy.html">Kebijakan Privasi</a>
+      <a href="terms-of-service.html">Syarat Layanan</a>
+    </div>
+    <div class="foot-col">
+      <div class="fh">Kontak</div>
+      <span>Adip, pemilik server</span>
+      <span>Lewat Discord di ADIP RMX</span>
+    </div>
   </div>
-  <nav>
-    <a href="privacy-policy.html">Kebijakan Privasi</a>
-    <a href="terms-of-service.html">Syarat Layanan</a>
-    <a href="#penerimaan">Kembali ke atas</a>
-  </nav>
+  <div class="foot-base">
+    <span>© 2026 ADIP RMX</span>
+    <span>Ditulis buat manusia, bukan buat robot.</span>
+  </div>
 </footer>
 
 <div id="toast" role="status"></div>
-<button id="topBtn" title="Ke atas" aria-label="Kembali ke atas">↑</button>
-<script src="script.js?v=2"></script>
+<button id="toTop" aria-label="Kembali ke atas">↑</button>
+<script src="script.js?v=3"></script>
 </body>
 </html>
