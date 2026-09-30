@@ -3,6 +3,25 @@
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ——— bahasa UI (id / en) ——— */
+  var T = (document.documentElement.lang || "id").toLowerCase().indexOf("en") === 0 ? {
+    copied: "Section link copied ✓",
+    toggleAria: "Expand or collapse section: ",
+    pick: "Pick a section…",
+    emptyHead: "0 sections found",
+    noMatch: function (q) { return "No matches for “" + q + "”. Try a more general word."; },
+    foundHead: function (n) { return n + (n === 1 ? " section found" : " sections found"); },
+    foundTail: " — tap one to jump straight there."
+  } : {
+    copied: "Tautan bab disalin ✓",
+    toggleAria: "Buka atau tutup bab ",
+    pick: "Pilih bab…",
+    emptyHead: "0 bab ketemu",
+    noMatch: function (q) { return "Nggak ketemu buat “" + q + "”. Coba kata yang lebih umum."; },
+    foundHead: function (n) { return n + " bab ketemu"; },
+    foundTail: " — klik buat langsung lompat."
+  };
+
   /* ——— reading progress + hero parallax ——— */
   var bar = document.getElementById("progress"),
       heroInner = document.querySelector(".hero-inner"),
@@ -80,7 +99,7 @@
     btn.addEventListener("click", function (ev) {
       ev.preventDefault();
       var url = location.origin + location.pathname + "#" + btn.dataset.target;
-      function done() { showToast("Tautan bab disalin ✓"); }
+      function done() { showToast(T.copied); }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(done, function () { showToast(url); });
       } else { showToast(url); }
@@ -146,7 +165,7 @@
     toggle.className = "chapter-toggle";
     toggle.innerHTML = "<span aria-hidden='true'>▾</span>";
     toggle.setAttribute("aria-controls", bodyWrap.id);
-    toggle.setAttribute("aria-label", "Buka atau tutup bab " + chapterTitle(chapter));
+    toggle.setAttribute("aria-label", T.toggleAria + chapterTitle(chapter));
     chapter._toggle = toggle;
     h2.appendChild(toggle);
     chaptersById[chapter.id] = chapter;
@@ -208,7 +227,7 @@
   if (chapterJump) {
     var firstOption = document.createElement("option");
     firstOption.value = "";
-    firstOption.textContent = "Pilih bab…";
+    firstOption.textContent = T.pick;
     chapterJump.appendChild(firstOption);
     links.forEach(function (link) {
       var id = link.getAttribute("href").slice(1);
@@ -267,9 +286,9 @@
     });
     matches.forEach(function (chapter) { chapter.classList.add("search-match"); });
     if (!matches.length) {
-      quickResults.innerHTML = "<p class='quick-results-head'><strong>0 bab ketemu</strong></p><div class='no-result'>Nggak ketemu buat “" + q.replace(/</g, "&lt;") + "”. Coba kata yang lebih umum.</div>";
+      quickResults.innerHTML = "<p class='quick-results-head'><strong>" + T.emptyHead + "</strong></p><div class='no-result'>" + T.noMatch(q.replace(/</g, "&lt;")) + "</div>";
     } else {
-      var html = "<p class='quick-results-head'><strong>" + matches.length + " bab ketemu</strong> — klik buat langsung lompat.</p><div class='result-list'>";
+      var html = "<p class='quick-results-head'><strong>" + T.foundHead(matches.length) + "</strong>" + T.foundTail + "</p><div class='result-list'>";
       matches.slice(0, 6).forEach(function (chapter) {
         html += "<button type='button' class='result-chip' data-target='" + chapter.id + "'><strong>" + chapterTitle(chapter) + "</strong><span>" + snippetFor(chapter, q).replace(/</g, "&lt;") + "</span></button>";
       });
