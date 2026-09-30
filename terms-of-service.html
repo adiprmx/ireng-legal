@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syarat Layanan — Ireng · ADIP RMX</title>
+<meta name="description" content="Syarat Layanan resmi Ireng, bot Discord komunitas ADIP RMX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#D4AF37; --gold-2:#f5d97e; --gold-dim:rgba(212,175,55,.35);
+    --bg:#08080b; --card:rgba(255,255,255,.035); --line:rgba(212,175,55,.16);
+    --text:#ececf0; --muted:#a2a2ad; --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.75;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#111}
+  #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:100;box-shadow:0 0 12px var(--gold-dim)}
+  .hero{position:relative;padding:110px 20px 80px;text-align:center;overflow:hidden;
+    background:radial-gradient(900px 480px at 50% -10%,rgba(212,175,55,.16),transparent 60%),radial-gradient(700px 400px at 85% 110%,rgba(212,175,55,.07),transparent 60%),var(--bg)}
+  #dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(212,175,55,.06);color:var(--gold-2);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;animation:fadeDown .9s ease both}
+  .cat{font-size:64px;margin:26px 0 6px;animation:float 5s ease-in-out infinite}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6.5vw,62px);font-weight:800;line-height:1.12;animation:fadeUp 1s .1s ease both}
+  h1 .shine{background:linear-gradient(100deg,#b8912a 10%,var(--gold) 35%,#fff3c4 50%,var(--gold) 65%,#b8912a 90%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+  .subtitle{color:var(--muted);font-size:clamp(15px,2.4vw,18px);max-width:600px;margin:18px auto 0;animation:fadeUp 1s .25s ease both}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px;animation:fadeUp 1s .4s ease both}
+  .chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:13.5px;color:#d8d8de}
+  .chip b{color:var(--gold-2)}
+  .tabs{display:inline-flex;gap:6px;margin-top:38px;padding:6px;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.35);animation:fadeUp 1s .55s ease both}
+  .tabs a{padding:9px 22px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;color:var(--muted);transition:.3s}
+  .tabs a:hover{color:var(--text)}
+  .tabs a.active{background:linear-gradient(135deg,var(--gold),#b8912a);color:#141005;box-shadow:0 4px 18px rgba(212,175,55,.35)}
+  .layout{max-width:1120px;margin:0 auto;padding:56px 20px 30px;display:grid;grid-template-columns:250px 1fr;gap:36px}
+  nav.toc{position:sticky;top:28px;align-self:start}
+  nav.toc h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  nav.toc a{display:block;padding:8px 14px;margin-bottom:4px;border-left:2px solid rgba(255,255,255,.08);color:var(--muted);text-decoration:none;font-size:14px;transition:.25s}
+  nav.toc a:hover{color:var(--text)}
+  nav.toc a.active{border-left-color:var(--gold);color:var(--gold-2);background:linear-gradient(90deg,rgba(212,175,55,.1),transparent)}
+  main{min-width:0}
+  section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 32px;margin-bottom:22px;scroll-margin-top:30px;backdrop-filter:blur(6px);transition:border-color .3s,transform .3s}
+  section:hover{border-color:rgba(212,175,55,.4)}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,rgba(212,175,55,.25),rgba(212,175,55,.08));border:1px solid var(--line);color:var(--gold-2);font-weight:700;font-size:15px;margin-bottom:12px}
+  h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:12px}
+  p,li{font-size:15.5px;color:#cfcfd8}
+  p+p{margin-top:10px}
+  ul{padding-left:20px;margin-top:8px}
+  li{margin-bottom:7px}
+  li::marker{color:var(--gold)}
+  strong{color:#fff}
+  em{color:var(--gold-2);font-style:normal}
+  a{color:var(--gold-2)}
+  .callout{border:1px solid var(--line);border-left:4px solid var(--gold);background:linear-gradient(90deg,rgba(212,175,55,.08),transparent);border-radius:12px;padding:16px 20px;margin-top:16px}
+  .callout p{font-size:14.5px}
+  .faq{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:6px}
+  .faq-item+.faq-item{border-top:1px solid rgba(255,255,255,.07)}
+  .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;background:transparent;border:0;color:var(--text);font:inherit;font-weight:600;font-size:15.5px;text-align:left;padding:18px 22px;cursor:pointer}
+  .faq-q .arrow{color:var(--gold);transition:transform .35s;font-size:18px}
+  .faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
+  .faq-a p{padding:0 22px 20px;font-size:14.5px}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  footer{text-align:center;padding:44px 20px 60px;color:var(--muted);font-size:13.5px}
+  footer .fcat{font-size:30px;margin-bottom:8px}
+  #topBtn{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(20,20,26,.9);color:var(--gold-2);font-size:19px;cursor:pointer;opacity:0;pointer-events:none;transition:.35s;z-index:90;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+  #topBtn.show{opacity:1;pointer-events:auto}
+  #topBtn:hover{background:var(--gold);color:#141005}
+  @keyframes shine{to{background-position:200% center}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+  @media(max-width:860px){
+    .layout{grid-template-columns:1fr}
+    nav.toc{position:static;display:flex;flex-wrap:wrap;gap:6px}
+    nav.toc h3{width:100%}
+    nav.toc a{border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+    nav.toc a.active{border-color:var(--gold)}
+    section{padding:24px 20px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="hero">
+  <canvas id="dust"></canvas>
+  <div class="hero-inner">
+    <span class="badge">🐈‍⬛ ADIP RMX · Dokumen Resmi</span>
+    <div class="cat">🐈‍⬛</div>
+    <h1>Syarat Layanan<br><span class="shine">Ireng</span></h1>
+    <p class="subtitle">Aturan main yang jelas dan adil buat semua orang di server. Baca sekali, main tenang seterusnya.</p>
+    <div class="meta">
+      <span class="chip">📅 Berlaku: <b>1 Oktober 2026</b></span>
+      <span class="chip">🏠 Server: <b>ADIP RMX</b></span>
+      <span class="chip">⚖️ Berlaku buat: <b>semua pengguna</b></span>
+    </div>
+    <div class="tabs">
+      <a href="privacy-policy.html">Kebijakan Privasi</a>
+      <a href="terms-of-service.html" class="active">Syarat Layanan</a>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" id="toc">
+    <h3>Daftar Isi</h3>
+    <a href="#penerimaan">1 · Penerimaan Syarat</a>
+    <a href="#layanan">2 · Tentang Layanan</a>
+    <a href="#aturan">3 · Aturan Pakai</a>
+    <a href="#ruang">4 · Ruang Pribadi</a>
+    <a href="#ai">5 · Konten AI</a>
+    <a href="#moderasi">6 · Moderasi</a>
+    <a href="#ip">7 · Kekayaan Intelektual</a>
+    <a href="#tanggung">8 · Ketersediaan &amp; Tanggung Jawab</a>
+    <a href="#perubahan">9 · Perubahan Syarat</a>
+    <a href="#kontak">10 · Kontak</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <main>
+    <section id="penerimaan" class="reveal">
+      <span class="num">1</span>
+      <h2>Penerimaan Syarat</h2>
+      <p>Dengan memakai <strong>Ireng</strong> — termasuk menjalankan command-nya, ngobrol di ruang pribadi, atau sekadar jadi member server <strong>ADIP RMX</strong> — kamu dianggap sudah baca dan setuju sama syarat di halaman ini, plus <a href="privacy-policy.html">Kebijakan Privasi</a> dan aturan server. Kalau nggak setuju, jangan pakai layanannya.</p>
+      <p>Kamu juga wajib memenuhi syarat usia minimum Discord dan mematuhi <a href="https://discord.com/terms">Terms of Service Discord</a>.</p>
+    </section>
+
+    <section id="layanan" class="reveal">
+      <span class="num">2</span>
+      <h2>Tentang Layanan</h2>
+      <p>Ireng adalah bot Discord komunitas ADIP RMX yang nyediain:</p>
+      <ul>
+        <li>Moderasi otomatis &amp; manual (anti-spam, anti-judol, anti-toxic, anti-raid)</li>
+        <li>Ngobrol AI di ruang pribadi lewat <em>/ruangpribadi</em></li>
+        <li>Sistem level/XP, kartu member, dan achievement</li>
+        <li>Fitur komunitas: cari partner ft, saran, event, dan lainnya</li>
+      </ul>
+      <p>Fitur bisa berubah, bertambah, atau berhenti sewaktu-waktu ngikutin perkembangan server.</p>
+    </section>
+
+    <section id="aturan" class="reveal">
+      <span class="num">3</span>
+      <h2>Aturan Pakai</h2>
+      <ul>
+        <li><strong>Dilarang nge-bypass</strong> batasan bot: spam command, exploit bug, atau ngakalin cooldown.</li>
+        <li><strong>Dilarang nyalahgunain</strong> fitur otomatis (auto-responder, report, saran) buat ganggu orang lain.</li>
+        <li><strong>Dilarang nyebar</strong> konten ilegal, judol, SARA, atau konten yang melanggar aturan server &amp; Discord lewat fitur bot.</li>
+        <li><strong>Dilarang ngaku-ngaku</strong> jadi staff/owner atau nyoba akses command yang bukan hakmu. Command moderasi &amp; konfigurasi khusus staff — titik.</li>
+        <li><strong>Dilarang jual-beli</strong> akses, badge, atau data yang berkaitan sama bot.</li>
+      </ul>
+      <div class="callout">
+        <p>💡 Nemu bug? Lapor ke staff, jangan dieksploitasi. Yang lapor beneran biasanya malah diapresiasi.</p>
+      </div>
+    </section>
+
+    <section id="ruang" class="reveal">
+      <span class="num">4</span>
+      <h2>Ruang Pribadi</h2>
+      <ul>
+        <li>Satu user = satu ruang pribadi. Ruang itu khusus buat pemiliknya.</li>
+        <li>Jangan bagi-bagi akses, maksa masuk, atau ngintip ruang orang lain.</li>
+        <li>Isi obrolanmu tanggung jawabmu sendiri — aturan server tetap berlaku di sana.</li>
+        <li>Ruang bisa dihapus owner/staff kalau disalahgunakan atau melanggar aturan.</li>
+      </ul>
+    </section>
+
+    <section id="ai" class="reveal">
+      <span class="num">5</span>
+      <h2>Konten AI</h2>
+      <p>Respon AI Ireng dibuat otomatis oleh model bahasa dan <strong>bisa aja salah, ngaco, atau nggak lengkap</strong>. Jangan jadiin satu-satunya rujukan buat keputusan penting (kesehatan, hukum, keuangan, dll). Tim ADIP RMX nggak bertanggung jawab atas keputusan yang diambil murni dari jawaban bot.</p>
+    </section>
+
+    <section id="moderasi" class="reveal">
+      <span class="num">6</span>
+      <h2>Moderasi &amp; Penegakan</h2>
+      <p>Pelanggaran syarat ini atau aturan server bisa berujung: <strong>peringatan → timeout → kick → ban</strong>, ngikutin tingkat pelanggarannya. Sistem peringatan berjalan bertahap dan tercatat; keputusan staff bersifat final. Kalau merasa kena tindakan yang keliru, sampaikan lewat jalur banding yang disediakan server.</p>
+    </section>
+
+    <section id="ip" class="reveal">
+      <span class="num">7</span>
+      <h2>Kekayaan Intelektual</h2>
+      <p>Logo, nama, dan identitas visual <strong>ADIP RMX</strong> serta Ireng adalah milik owner server. Jangan dipakai ulang di luar server tanpa izin. Karya yang kamu bagikan di server (remix, artwork, dll) tetap milikmu — kamu cuma ngasih izin buat ditampilin di dalam server.</p>
+    </section>
+
+    <section id="tanggung" class="reveal">
+      <span class="num">8</span>
+      <h2>Ketersediaan &amp; Tanggung Jawab</h2>
+      <p>Ireng diusahakan online 24/7, tapi layanan diberikan <strong>"apa adanya"</strong> — bisa aja downtime buat maintenance, update, atau hal di luar kendali (gangguan host, Discord, internet). Nggak ada garansi uptime 100%, dan kami nggak bertanggung jawab atas kerugian akibat gangguan layanan atau kehilangan progres (XP/badge) karena insiden teknis.</p>
+    </section>
+
+    <section id="perubahan" class="reveal">
+      <span class="num">9</span>
+      <h2>Perubahan Syarat</h2>
+      <p>Syarat ini bisa diupdate sewaktu-waktu. Perubahan signifikan diumumin di channel pengumuman server, dan tanggal "Berlaku" di atas diperbarui. Lanjut pakai Ireng setelah update = setuju sama versi baru.</p>
+    </section>
+
+    <section id="kontak" class="reveal">
+      <span class="num">10</span>
+      <h2>Kontak</h2>
+      <p>Pertanyaan soal syarat layanan? Hubungi <strong>owner / staff server ADIP RMX</strong> lewat channel yang tersedia di server.</p>
+    </section>
+
+    <section id="faq" class="reveal">
+      <span class="num">?</span>
+      <h2>FAQ — Yang Sering Ditanyain</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q">Kalau gue nggak setuju sama syaratnya gimana?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Sesimpel: jangan pakai Ireng. Sebagian besar syarat ini sebenarnya cerminan aturan server — jadi selama kamu ikut aturan server, kamu udah aman.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Jawaban AI-nya salah, gue rugi. Siapa tanggung jawab?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>AI bisa ngaco — itu udah ditulis jelas di poin 5. Buat hal penting, selalu cek ke sumber beneran. Keputusan akhir tetap di tanganmu.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Gue kena timeout/ban, bisa banding?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Bisa, lewat jalur banding yang disediakan server. Keputusan staff final, tapi banding yang sopan dan masuk akal selalu dibaca.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Botnya mati, XP gue ilang. Gimana?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Ada sistem backup berkala, jadi biasanya aman. Tapi sesuai poin 8, nggak ada garansi 100% — layanan ini gratis dan apa adanya.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="fcat">🐈‍⬛</div>
+  <p>© 2026 ADIP RMX · Ireng — the mind behind ADIP RMX</p>
+  <p><a href="privacy-policy.html">Kebijakan Privasi</a> · <a href="#penerimaan">Kembali ke atas</a></p>
+</footer>
+
+<button id="topBtn" title="Ke atas">↑</button>
+
+<script>
+  const bar = document.getElementById('progress');
+  addEventListener('scroll', () => {
+    const h = document.documentElement;
+    bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+    document.getElementById('topBtn').classList.toggle('show', h.scrollTop > 600);
+  }, {passive:true});
+  document.getElementById('topBtn').onclick = () => scrollTo({top:0, behavior:'smooth'});
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const links = [...document.querySelectorAll('#toc a')];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }
+  }), {rootMargin:'-30% 0px -60% 0px'});
+  document.querySelectorAll('main section').forEach(s => spy.observe(s));
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q'), a = item.querySelector('.faq-a');
+    q.onclick = () => {
+      const open = item.classList.toggle('open');
+      a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+    };
+  });
+
+  const cv = document.getElementById('dust'), ctx = cv.getContext('2d');
+  let W, H, ps = [];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){ W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+  size(); addEventListener('resize', size);
+  for (let i = 0; i < 46; i++) ps.push({x:Math.random(), y:Math.random(), r:Math.random()*1.8+.4, s:Math.random()*.00045+.00012, o:Math.random()*.5+.15, ph:Math.random()*6.28});
+  (function tick(t){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p => {
+      const tw = .55 + .45 * Math.sin(t*.001 + p.ph);
+      ctx.beginPath();
+      ctx.arc(p.x*W, (p.y - (t*p.s % 1) + 1) % 1 * H, p.r, 0, 6.29);
+      ctx.fillStyle = 'rgba(212,175,55,' + (p.o*tw) + ')';
+      ctx.fill();
+    });
+    if (!reduced) requestAnimationFrame(tick);
+  })(0);
+</script>
+</body>
+</html>
