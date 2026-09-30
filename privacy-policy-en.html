@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Ireng · ADIP RMX</title>
+<meta name="description" content="Ireng Privacy Policy: an honest explanation of what data the ADIP RMX community Discord bot stores, and why.">
+<link rel="alternate" hreflang="id" href="https://adiprmx.github.io/ireng-legal/privacy-policy.html">
+<link rel="alternate" hreflang="en" href="https://adiprmx.github.io/ireng-legal/privacy-policy-en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+<div id="progress"></div>
+<div id="glow"></div>
+
+<header class="hero">
+  <canvas id="dust"></canvas>
+  <div class="watermark">§</div>
+  <div class="hero-inner">
+    <span class="kicker">🐈‍⬛ ADIP RMX · Official Document</span>
+    <h1>Privacy <span class="shine">Policy</span></h1>
+    <p class="lede">Your data, your rights. This is an honest rundown of what Ireng stores, what it's for, and how long it stays — written to be understood, not to put you to sleep.</p>
+    <div class="seals">
+      <span class="seal"><span class="dot"></span>Effective <b>October 1, 2026</b></span>
+      <span class="seal"><span class="dot"></span>Server <b>ADIP RMX</b></span>
+      <span class="seal"><span class="dot"></span>Version <b>2.1</b></span>
+    </div>
+    <nav class="doctabs" aria-label="Legal documents">
+      <a href="privacy-policy-en.html" class="active">Privacy Policy</a>
+      <a href="terms-of-service-en.html">Terms of Service</a>
+    </nav>
+    <nav class="langswitch" aria-label="Language">
+      <a href="privacy-policy.html">ID</a>
+      <a href="privacy-policy-en.html" class="active" aria-current="true">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="quickbar" id="quickbar">
+  <div class="quickbar-inner">
+    <div class="quick-search">
+      <label class="sr-only" for="chapterSearch">Search topics on this page</label>
+      <span class="quick-icon" aria-hidden="true">⌕</span>
+      <input id="chapterSearch" type="search" placeholder="Search topics: data, AI, delete data…" autocomplete="off">
+      <button id="clearSearch" class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+    </div>
+    <div class="quick-jump">
+      <label for="chapterJump">Jump to</label>
+      <select id="chapterJump" aria-label="Jump to a section"></select>
+    </div>
+    <div class="view-switch" role="group" aria-label="Reading mode">
+      <button type="button" data-view="cepat" class="active" aria-pressed="true">Quick</button>
+      <button type="button" data-view="penuh" aria-pressed="false">Full read</button>
+    </div>
+  </div>
+  <div class="quick-results" id="quickResults" hidden></div>
+</div>
+
+<div class="shell">
+  <nav class="rail" aria-label="Sections">
+    <h3>Sections</h3>
+    <a href="#mengapa"><span class="n">01</span>Why this document exists</a>
+    <a href="#data"><span class="n">02</span>What Ireng stores</a>
+    <a href="#ruang"><span class="n">03</span>Private rooms</a>
+    <a href="#tujuan"><span class="n">04</span>What it's all for</a>
+    <a href="#pihak-ketiga"><span class="n">05</span>Third parties &amp; AI</a>
+    <a href="#keamanan"><span class="n">06</span>Security</a>
+    <a href="#hak"><span class="n">07</span>Your rights</a>
+    <a href="#retensi"><span class="n">08</span>How long it's kept</a>
+    <a href="#kontak"><span class="n">09</span>Changes &amp; contact</a>
+    <a href="#faq"><span class="n">?</span>FAQ</a>
+  </nav>
+
+  <main>
+    <section class="summary-strip" aria-label="Quick summary">
+      <a class="summary-card" href="#data"><span>Data</span><strong>Only what's needed</strong><small>Only data the server features actually require is stored.</small></a>
+      <a class="summary-card" href="#pihak-ketiga"><span>AI</span><strong>Chats are forwarded</strong><small>Private-room messages are processed by an AI provider so they can be answered.</small></a>
+      <a class="summary-card" href="#hak"><span>Your rights</span><strong>See it &amp; delete it</strong><small>You can request a summary of your data, or have it deleted.</small></a>
+    </section>
+    <section class="chapter reveal" id="mengapa">
+      <span class="ghost">01</span>
+      <div class="eyebrow">Section 01</div>
+      <h2>Why this document exists <button class="copylink" data-target="mengapa" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">Most privacy policies are written to tick a box, not to be read. This one is different: Ireng is a community bot, and a community runs on trust.</p>
+      <p>This document honestly lists what data Ireng stores while you hang out in the <strong>ADIP RMX</strong> server, what it's used for, who it's shared with, and how long it's kept. No legalese hiding the important parts, no tiny asterisks at the bottom. If anything here makes you uncomfortable after reading it, that's your right — and how to speak up is in <a href="#hak">Section 07</a>.</p>
+    </section>
+
+    <section class="chapter reveal" id="data">
+      <span class="ghost">02</span>
+      <div class="eyebrow">Section 02</div>
+      <h2>What Ireng stores <button class="copylink" data-target="data" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">One principle: store as little as possible — only what the features genuinely need. This is the complete list; nothing is hidden outside this table.</p>
+      <table class="ledger">
+        <thead><tr><th>Data</th><th>What's in it</th><th>What's it for</th></tr></thead>
+        <tbody>
+          <tr><td>Discord identity</td><td>Username, user ID, avatar</td><td>Showing member cards, levels, and personal greetings</td></tr>
+          <tr><td>Levels &amp; XP</td><td>Chat &amp; voice activity points</td><td>The server level system and achievement badges</td></tr>
+          <tr><td>Private-room chats</td><td>Short-term memory — only the last few messages</td><td>So conversations with the AI stay connected instead of resetting every message</td></tr>
+          <tr><td>Moderation records</td><td>Warnings and staff action logs</td><td>Server safety; warnings expire automatically after 7 days</td></tr>
+          <tr><td>Structure backups</td><td>Channel list, roles, server settings</td><td>Emergency recovery if the server runs into trouble</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><p><strong>What's <em>not</em> stored:</strong> the contents of your DMs, any password or token of yours, and your browsing history. Ireng has no business with any of that.</p></div>
+    </section>
+
+    <section class="chapter reveal" id="ruang">
+      <span class="ghost">03</span>
+      <div class="eyebrow">Section 03</div>
+      <h2>Private rooms: your stronghold <button class="copylink" data-target="ruang" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">Private rooms (<em>/ruangpribadi</em>) are where you chat with Ireng's AI — and this is the part guarded most seriously.</p>
+      <div class="oath">
+        <p>Your chats in your private room are your business. The bot won't serve anyone else who wanders in, won't keep snippets of the conversation, and won't show it to anyone.</p>
+        <cite>— Ireng's design promise</cite>
+      </div>
+      <ul>
+        <li>Private-room channels are locked to their owner: other members and regular staff <strong>can't see them</strong> from the channel view.</li>
+        <li>Ireng only talks to the <strong>registered room owner</strong>. Anyone else typing there is ignored completely — no response, no trace.</li>
+        <li>Chats the bot fails to answer in a private room are <strong>not</strong> entered into any error log the owner can read.</li>
+      </ul>
+      <div class="note"><p><strong>Being upfront:</strong> the server owner and Administrator permission holders can technically still open any channel — that's a Discord platform limitation, not Ireng's choice. But no staff or member can, and the bot won't serve them.</p></div>
+    </section>
+
+    <section class="chapter reveal" id="tujuan">
+      <span class="ghost">04</span>
+      <div class="eyebrow">Section 04</div>
+      <h2>What it's all for <button class="copylink" data-target="tujuan" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">In short: to keep the server running and fun. Nothing more.</p>
+      <p>All data in Section 02 is used <strong>only</strong> to run the bot's features in the ADIP RMX server — levels, member cards, moderation, backups, and AI chat. Data is <strong>never sold</strong>, <strong>never shared</strong> with third parties for commercial purposes, and <strong>never used for advertising</strong>. Full stop.</p>
+    </section>
+
+    <section class="chapter reveal" id="pihak-ketiga">
+      <span class="ghost">05</span>
+      <div class="eyebrow">Section 05</div>
+      <h2>Third parties &amp; AI <button class="copylink" data-target="pihak-ketiga" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">This part is written out explicitly so nobody feels misled.</p>
+      <p>When you chat in a private room, your message is forwarded to an <strong>AI model provider (Google Gemini as the primary, with backup providers if the primary is at capacity)</strong> to generate a reply. AI providers process the message content and the sender's username under their own respective policies. This is the only "third party" besides <strong>Discord</strong> itself as the platform this bot runs on — and the processing is purely for the chat feature, never for selling or advertising.</p>
+    </section>
+
+    <section class="chapter reveal" id="keamanan">
+      <span class="ghost">06</span>
+      <div class="eyebrow">Section 06</div>
+      <h2>Security <button class="copylink" data-target="keamanan" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">No system is 100% unbreakable — all you can do is make breaking in as hard as possible.</p>
+      <ul>
+        <li>Data access is restricted — only the bot system and the server owner.</li>
+        <li>Bot credentials are stored in a local configuration file with restricted file permissions (chmod 600), and are never shown in chat.</li>
+        <li>No system is 100% unbreakable — if an incident ever involves user data, it will be announced in the server's announcement channel.</li>
+      </ul>
+    </section>
+
+    <section class="chapter reveal" id="hak">
+      <span class="ghost">07</span>
+      <div class="eyebrow">Section 07</div>
+      <h2>Your rights <button class="copylink" data-target="hak" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">The data is about you — so you're the one in control.</p>
+      <ul>
+        <li><strong>See it</strong> — request a summary of the data the bot stores about you.</li>
+        <li><strong>Delete it</strong> — request permanent deletion of your data.</li>
+        <li><strong>Leave</strong> — leaving the server = Ireng stops collecting new data about you.</li>
+      </ul>
+      <p>How: contact the <strong>owner / staff of ADIP RMX</strong>. Reasonable requests will be followed up.</p>
+    </section>
+
+    <section class="chapter reveal" id="retensi">
+      <span class="ghost">08</span>
+      <div class="eyebrow">Section 08</div>
+      <h2>How long it's kept <button class="copylink" data-target="retensi" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">Data isn't kept forever. Each type has its own lifespan.</p>
+      <table class="ledger">
+        <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+        <tbody>
+          <tr><td>Moderation warnings</td><td>Expire automatically after 7 days</td></tr>
+          <tr><td>Levels, XP, badges</td><td>For as long as you're a server member</td></tr>
+          <tr><td>Private-room chat memory</td><td>Short — only the last few messages, to keep context</td></tr>
+          <tr><td>Server structure backups</td><td>Periodic backups for emergency recovery</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="chapter reveal" id="kontak">
+      <span class="ghost">09</span>
+      <div class="eyebrow">Section 09</div>
+      <h2>Changes &amp; contact <button class="copylink" data-target="kontak" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <p class="lede">This document is alive — it will be updated when features change.</p>
+      <p>Significant changes are announced in the server's announcement channel, and the "Effective" date above is updated. Questions about privacy? Contact the <strong>owner / staff of the ADIP RMX server</strong> through the available channels.</p>
+    </section>
+
+    <section class="chapter reveal" id="faq">
+      <span class="ghost">?</span>
+      <div class="eyebrow">Q&amp;A</div>
+      <h2>Frequently asked questions <button class="copylink" data-target="faq" title="Copy section link" aria-label="Copy section link">§</button></h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can Ireng read my DMs?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>No. Ireng only reads messages in server channels and in the private room you create yourself. DMs are Discord's territory, not the bot's.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is my data sold to advertisers?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>No, and it never will be. The only party that receives your messages outside Discord is the AI provider — purely so the chat feature works, never for ads.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Why are my AI chats sent to Google?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Because Ireng's brain runs on Google's Gemini AI model (with backups when it's at capacity). Without it, nobody would answer. Only your message content + username are sent — and private-room conversations aren't stored permanently.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can staff peek into my private room?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Regular staff and other members can't see it. The only ones who technically still can are the server owner / Administrator holders (a Discord limitation), but the bot won't serve them and there's no chat trace to read.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do I delete all my data?<span class="arrow">▾</span></button>
+          <div class="faq-a"><p>Message the ADIP RMX owner/staff and say you want your data deleted. It'll be followed up. Leaving the server also automatically stops new data collection.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="mono">I</div>
+  <p>© 2026 ADIP RMX · Ireng — the mind behind ADIP RMX</p>
+  <div class="sealrow">
+    <span class="seal">Document <b>v2.1</b></span>
+    <span class="seal">Effective <b>Oct 1, 2026</b></span>
+  </div>
+  <nav>
+    <a href="privacy-policy-en.html">Privacy Policy</a>
+    <a href="terms-of-service-en.html">Terms of Service</a>
+    <a href="#mengapa">Back to top</a>
+  </nav>
+</footer>
+
+<div id="toast" role="status"></div>
+<button id="topBtn" title="Back to top" aria-label="Back to top">↑</button>
+<script src="script.js?v=7"></script>
+</body>
+</html>
