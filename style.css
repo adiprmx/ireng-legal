@@ -14,8 +14,8 @@
   --gold-faint:rgba(212,175,55,.14);
   --hair:rgba(212,175,55,.18);
   --card:rgba(255,255,255,.028);
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --serif:'Nunito',system-ui,-apple-system,sans-serif;
+  --sans:'Nunito',system-ui,-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -126,7 +126,7 @@ main{min-width:0}
 h2:hover .copylink,.copylink:focus-visible{opacity:1}
 .copylink:hover{background:rgba(212,175,55,.12)}
 .chapter .lede{color:var(--ink-dim);font-size:1.06rem;max-width:62ch;margin:14px 0 4px}
-.chapter .lede::first-letter{font-family:var(--serif);font-size:2.6em;float:left;line-height:.86;
+.chapter .lede::first-letter{font-family:var(--serif);font-weight:800;font-size:2.6em;float:left;line-height:.86;
   padding:4px 10px 0 0;color:var(--gold-hi)}
 .chapter p{color:var(--ink-dim);margin-top:14px;max-width:68ch}
 .chapter ul{margin:14px 0 0;padding-left:4px;list-style:none;max-width:68ch}
