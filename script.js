@@ -254,7 +254,22 @@
       btn.setAttribute("aria-pressed", active ? "true" : "false");
     });
     if (viewMode === "penuh") {
+      var toOpen = chapters.filter(function (c) { return c.classList.contains("is-closed"); });
       chapters.forEach(function (chapter) { setChapterOpen(chapter, true); });
+      if (booted && !reduced) {
+        toOpen.forEach(function (chapter, i) {
+          var wrap = chapter._bodyWrap;
+          if (!wrap) return;
+          wrap.classList.remove("rise-in");
+          void wrap.offsetWidth;
+          wrap.style.animationDelay = Math.min(i * 45, 360) + "ms";
+          wrap.classList.add("rise-in");
+          window.setTimeout(function () {
+            wrap.classList.remove("rise-in");
+            wrap.style.animationDelay = "";
+          }, 1250);
+        });
+      }
     } else {
       var keep = chaptersById[activeId] || chapters.filter(function (c) { return !c.classList.contains("is-closed"); })[0] || chapters[0];
       chapters.forEach(function (chapter) { setChapterOpen(chapter, chapter === keep); });
