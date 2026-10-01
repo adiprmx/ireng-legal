@@ -130,6 +130,8 @@
       viewButtons = Array.prototype.slice.call(document.querySelectorAll(".view-switch button")),
       viewMode = "cepat";
 
+  var booted = false;
+
   function syncQuickbarHeight() {
     if (quickbar) document.documentElement.style.setProperty("--qb", quickbar.offsetHeight + "px");
   }
@@ -180,8 +182,46 @@
 
   function setChapterOpen(chapter, open) {
     chapter.classList.toggle("is-closed", !open);
-    if (chapter._bodyWrap) chapter._bodyWrap.hidden = viewMode === "cepat" && !open;
     if (chapter._toggle) chapter._toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    var wrap = chapter._bodyWrap;
+    if (!wrap) return;
+    var token = (chapter._anim = (chapter._anim || 0) + 1);
+    if (!booted || reduced || viewMode !== "cepat") {
+      wrap.hidden = viewMode === "cepat" && !open;
+      wrap.style.height = "";
+      return;
+    }
+    if (open) {
+      var wasHidden = wrap.hidden;
+      wrap.hidden = false;
+      var startH = wasHidden ? 0 : wrap.clientHeight;
+      var targetH = wrap.scrollHeight;
+      wrap.style.height = startH + "px";
+      void wrap.offsetHeight;
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          if (chapter._anim === token) wrap.style.height = targetH + "px";
+        });
+      });
+      window.setTimeout(function () {
+        if (chapter._anim === token && !chapter.classList.contains("is-closed")) wrap.style.height = "";
+      }, 620);
+    } else {
+      var curH = wrap.clientHeight;
+      wrap.style.height = curH + "px";
+      void wrap.offsetHeight;
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          if (chapter._anim === token) wrap.style.height = "0px";
+        });
+      });
+      window.setTimeout(function () {
+        if (chapter._anim === token && chapter.classList.contains("is-closed")) {
+          wrap.hidden = true;
+          wrap.style.height = "";
+        }
+      }, 620);
+    }
   }
 
   function markActive(id) {
@@ -338,6 +378,7 @@
   var initialId = location.hash ? location.hash.slice(1) : null;
   setView(viewMode, chaptersById[initialId] ? initialId : (chapters[0] && chapters[0].id));
   if (chaptersById[initialId]) activateChapter(initialId, { scroll: true });
+  booted = true;
   syncQuickbarHeight();
   window.addEventListener("resize", function () { syncQuickbarHeight(); refreshFaqHeights(document); });
 
