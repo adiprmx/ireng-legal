@@ -154,6 +154,8 @@ main{min-width:0}
 /* ————— chapters ————— */
 .chapter{position:relative;padding:42px 0;scroll-margin-top:calc(var(--qb) + 18px)}
 .chapter-body{transition:height .55s cubic-bezier(.16,1,.3,1)}
+.chapter-body.rise-in{animation:chapterRise .55s cubic-bezier(.16,1,.3,1) both}
+@keyframes chapterRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .chapter + .chapter{border-top:1px solid rgba(212,175,55,.1)}
 .ghost{position:absolute;top:22px;right:-6px;font-family:var(--serif);font-weight:800;
   font-size:clamp(5.5rem,11vw,9.5rem);line-height:1;color:transparent;
