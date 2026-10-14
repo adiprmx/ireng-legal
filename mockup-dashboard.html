@@ -2,77 +2,98 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ireng Panel — Mockup</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;overflow:hidden}
-body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#0b0b0c;color:#ededed}
-.mock{background:#161616;color:#777;text-align:center;font-size:10px;padding:6px;letter-spacing:2px}
-.app{display:flex;height:calc(100vh - 29px)}
-aside{width:208px;background:#101012;border-right:1px solid #1e1e20;padding:18px 12px;flex-shrink:0;overflow-y:auto}
-aside .logo{font-size:15px;font-weight:800;letter-spacing:1px}
-aside .logo em{font-style:normal;color:#777;font-weight:400}
-aside .sub{font-size:10.5px;color:#5a5a5a;margin:2px 0 12px}
-nav .g{font-size:9.5px;color:#555;text-transform:uppercase;letter-spacing:1.5px;margin:12px 10px 5px}
-nav button{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;color:#999;font-size:12.5px;padding:9px 10px;border-radius:8px;cursor:pointer;text-align:left;font-family:inherit;min-height:44px}
-nav button.on{background:#1c1c1f;color:#fff}
-nav button .n{font-size:10px;background:#26262a;color:#bbb;border-radius:10px;padding:1px 7px}
-main{flex:1;padding:18px 22px;overflow:hidden;min-width:0;display:flex;flex-direction:column}
-.eyebrow{font-size:11px;color:#777;margin-bottom:4px}
-h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
-.lede{font-size:12.5px;color:#999;margin:4px 0 14px}.lede b{color:#fff}
-.page{display:none;flex:1;min-height:0}
-.page.on{display:block}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
-.c{background:#131315;border:1px solid #222226;border-radius:12px;padding:13px 15px;position:relative;overflow:hidden}
-.c .k{font-size:10.5px;color:#888;margin-bottom:7px}
-.c .v{font-size:26px;font-weight:800;letter-spacing:-.5px}
-.c .v small{font-size:12px;font-weight:400;color:#888}
-.c .f{font-size:11px;margin-top:5px;color:#8fd694}
-.c .f.warn{color:#e0a33e}
-.c svg.spark{position:absolute;right:10px;bottom:8px;opacity:.5}
-.duo{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
-.panel{background:#131315;border:1px solid #222226;border-radius:12px;padding:14px 16px;overflow:hidden}
-.panel h3{font-size:12.5px;font-weight:650;margin-bottom:2px}
-.panel .hint{font-size:11px;color:#777;margin-bottom:8px}
-.rl{font-size:12px;color:#bbb;padding:7px 0;border-bottom:1px solid #1d1d20;display:flex;justify-content:space-between;gap:8px}
-.rl:last-child{border:none}
-.rl .a{color:#777;font-size:11px}
-.tag{font-size:10px;background:#1f1f1f;color:#ccc;padding:2px 9px;border-radius:11px;white-space:nowrap}
-.bar{height:6px;background:#222226;border-radius:3px;overflow:hidden;margin:5px 0 8px}
-.bar i{display:block;height:100%;background:#ededed;border-radius:3px}
-.feed{font-size:12px;color:#bbb}.feed div{padding:6px 0;border-bottom:1px solid #1d1d20}.feed div:last-child{border:none}
-.feed time{color:#666;font-size:10.5px}
-.note{background:#141410;border:1px dashed #3a3a2a;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#c9b98a}
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#8fd694;margin-right:6px}
-.donut{display:flex;align-items:center;gap:14px}
-.donut svg{flex-shrink:0}
-.legend{font-size:12px;color:#bbb}.legend div{margin:5px 0}.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:7px}
-.mtopbar{display:none}
-/* tablet */
-@media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
-/* mobile: sidebar jadi bar atas horizontal scroll */
-@media(max-width:760px){
-.app{flex-direction:column}
-aside{width:100%;border-right:none;border-bottom:1px solid #1e1e20;padding:10px 12px;height:auto}
-aside .sub{display:none}
-aside .logo{margin-bottom:8px}
-nav{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
-nav .g{display:none}
-nav button{white-space:nowrap;flex-shrink:0;min-height:44px}
-main{padding:14px}
-h1{font-size:19px}
-.duo{grid-template-columns:1fr}
-.c .v{font-size:23px}
+:root{
+  --bg:#0b0b0c; --surface:#131315; --surface2:#1a1a1d; --line:#222226;
+  --txt:#ededed; --mut:#999; --dim:#666;
+  --ok:#8fd694; --warn:#e0a33e; --tap:44px;
 }
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;display:flex;flex-direction:column}
+.mock{background:#161616;color:#777;text-align:center;font-size:10px;padding:6px 8px;letter-spacing:2px;flex-shrink:0}
+/* ===== layout: mobile-first, nav jadi bar atas ===== */
+.app{flex:1;display:flex;flex-direction:column;min-height:0}
+aside{background:#101012;border-bottom:1px solid #1e1e20;padding:10px 12px;flex-shrink:0}
+.brand{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.logo{font-size:15px;font-weight:800;letter-spacing:1px}
+.logo em{font-style:normal;color:#777;font-weight:400}
+.live{font-size:11px;color:var(--ok);display:flex;align-items:center;gap:6px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+nav::-webkit-scrollbar{display:none}
+nav .g{display:none}
+nav button{flex-shrink:0;display:flex;align-items:center;gap:7px;background:none;border:1px solid transparent;color:var(--mut);font-size:13px;padding:0 14px;min-height:var(--tap);border-radius:22px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .18s,color .18s,border-color .18s}
+nav button .n{font-size:10px;background:#26262a;color:#bbb;border-radius:10px;padding:2px 8px}
+nav button.on{background:var(--surface2);color:#fff;border-color:var(--line)}
+nav button:active{transform:scale(.96)}
+main{flex:1;min-height:0;overflow-y:auto;padding:14px 14px 28px;-webkit-overflow-scrolling:touch}
+.eyebrow{font-size:11px;color:var(--dim);margin-bottom:4px}
+h1{font-size:clamp(19px,5.4vw,24px);font-weight:750;letter-spacing:-.3px}
+.lede{font-size:clamp(12px,3.4vw,13.5px);color:var(--mut);margin:5px 0 14px;line-height:1.5}
+.lede b{color:#fff}
+.page{display:none}
+.page.on{display:block;animation:fadeSlide .28s ease}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px}
+.c{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;position:relative;overflow:hidden;transition:transform .15s,border-color .15s;cursor:default}
+.c:active{transform:scale(.98)}
+.c .k{font-size:11px;color:#888;margin-bottom:8px}
+.c .v{font-size:clamp(22px,6.5vw,28px);font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.c .v small{font-size:.5em;font-weight:400;color:#888}
+.c .f{font-size:11px;margin-top:6px;color:var(--ok)}
+.c .f.warn{color:var(--warn)}
+.c svg.spark{position:absolute;right:8px;bottom:6px;opacity:.55}
+.duo{display:grid;grid-template-columns:1fr;gap:10px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 15px;margin-bottom:10px}
+.panel h3{font-size:13px;font-weight:650;margin-bottom:2px}
+.panel .hint{font-size:11px;color:var(--dim);margin-bottom:8px}
+.rl{font-size:12.5px;color:#bbb;padding:10px 0;border-bottom:1px solid #1d1d20;display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:var(--tap);cursor:pointer}
+.rl:last-child{border:none}
+.rl .a{color:var(--dim);font-size:11px;flex-shrink:0}
+.rl:active{background:#18181b}
+.tag{font-size:10.5px;background:#1f1f1f;color:#ccc;padding:3px 10px;border-radius:12px;white-space:nowrap}
+.bar{height:7px;background:#222226;border-radius:4px;overflow:hidden;margin:6px 0 8px}
+.bar i{display:block;height:100%;background:var(--txt);border-radius:4px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.feed{font-size:12.5px;color:#bbb}
+.feed div{padding:9px 0;border-bottom:1px solid #1d1d20;line-height:1.45}
+.feed div:last-child{border:none}
+.feed time{color:var(--dim);font-size:10.5px}
+.note{background:#141410;border:1px dashed #3a3a2a;border-radius:12px;padding:12px 14px;font-size:13px;color:#c9b98a;line-height:1.5}
+.donut{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.legend{font-size:12.5px;color:#bbb}
+.legend div{margin:7px 0;min-height:24px;display:flex;align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;flex-shrink:0}
+svg.chart{width:100%;height:auto;display:block}
+.tick{font-size:10px;color:var(--dim);text-align:right;margin-top:4px}
+/* ===== tablet & desktop ===== */
+@media(min-width:700px){
+  .app{flex-direction:row}
+  aside{width:210px;border-bottom:none;border-right:1px solid #1e1e20;padding:18px 12px;overflow-y:auto}
+  .brand{flex-direction:column;align-items:flex-start;gap:2px}
+  aside .sub{display:block;font-size:10.5px;color:#5a5a5a;margin-bottom:14px}
+  nav{flex-direction:column;overflow:visible;padding-bottom:0}
+  nav .g{display:block;font-size:9.5px;color:#555;text-transform:uppercase;letter-spacing:1.5px;margin:12px 10px 5px}
+  nav button{border-radius:9px;justify-content:space-between;width:100%}
+  main{padding:20px 24px}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .duo{grid-template-columns:1.4fr 1fr}
+  .c:hover{border-color:#3a3a40}
+  .rl:hover{background:#161619}
+}
+@media(min-width:1100px){.cards{gap:12px}main{padding:24px 32px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="mock">MOCKUP — PREVIEW SAJA · RESPONSIF PENUH</div>
+<div class="mock">MOCKUP — PREVIEW SAJA</div>
 <div class="app">
 <aside>
-<div class="logo">IRENG <em>panel</em></div><div class="sub">ireng.adipmusic.my.id</div>
-<nav>
+<div class="brand"><div><div class="logo">IRENG <em>panel</em></div><div class="sub" style="display:none">ireng.adipmusic.my.id</div></div><div class="live"><i></i>online</div></div>
+<nav id="nav">
 <div class="g">Pantau</div>
 <button class="on" data-p="p1">Ringkasan</button>
 <button data-p="p2">Otak <span class="n">55rb</span></button>
@@ -90,29 +111,29 @@ h1{font-size:19px}
 <button data-p="p11">Catatan</button>
 </nav>
 </aside>
-<main>
-<div class="eyebrow">Rabu, 14 Okt 2026 · live · <span style="color:#8fd694"><span class="dot"></span>bot online</span></div>
+<main id="main">
+<div class="eyebrow">Rabu, 14 Okt 2026 · data live, update otomatis</div>
 
 <div class="page on" id="p1">
 <h1>Semua aman, fallback 18,52%</h1>
-<p class="lede">Online <b>6 jam 12 menit</b> · semalam nambah <b>1.252 intent</b> · skor <b>87/100</b></p>
+<p class="lede">Bot online <b>6 jam 12 menit</b>. Semalam nambah <b>1.252 intent</b>. Skor kesehatan <b>87/100</b>.</p>
 <div class="cards">
-<div class="c"><div class="k">Intent hidup</div><div class="v">55.171</div><div class="f">+1.252 sejak kemarin</div>
-<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,22 12,20 24,18 36,14 48,10 60,6 70,3" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
-<div class="c"><div class="k">Pola regex</div><div class="v">231<small>.021</small></div><div class="f">0 rusak</div>
-<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,20 14,19 28,16 42,12 56,8 70,5" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
-<div class="c"><div class="k">Fallback</div><div class="v">18,52<small>%</small></div><div class="f warn">target &lt; 2%</div>
-<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,4 14,7 28,9 42,13 56,17 70,20" fill="none" stroke="#e0a33e" stroke-width="2"/></svg></div>
-<div class="c"><div class="k">Scripted</div><div class="v">72<small>%</small></div><div class="f">tanpa AI luar</div>
-<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,18 14,16 28,14 42,11 56,9 70,7" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Intent hidup</div><div class="v" data-count="55171">0</div><div class="f">+1.252 sejak kemarin</div>
+<svg class="spark" width="64" height="24" viewBox="0 0 64 24"><polyline points="0,20 12,18 24,16 36,12 48,8 64,3" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Pola regex</div><div class="v" data-count="231021">0</div><div class="f">0 rusak</div>
+<svg class="spark" width="64" height="24" viewBox="0 0 64 24"><polyline points="0,19 12,18 24,15 36,11 48,7 64,4" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Fallback</div><div class="v"><span data-count="18" data-dec="1">0</span><small>,52%</small></div><div class="f warn">target &lt; 2%</div>
+<svg class="spark" width="64" height="24" viewBox="0 0 64 24"><polyline points="0,4 12,6 24,8 36,12 48,16 64,19" fill="none" stroke="#e0a33e" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Dijawab scripted</div><div class="v"><span data-count="72">0</span><small>%</small></div><div class="f">tanpa AI luar</div>
+<svg class="spark" width="64" height="24" viewBox="0 0 64 24"><polyline points="0,17 12,15 24,13 36,10 48,8 64,6" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
 </div>
 <div class="duo">
 <div class="panel"><h3>Kabar terakhir</h3><div class="feed">
-<div>Remediasi 96 file kelar, 0 regresi <time>20:35</time></div>
-<div>Serapan run-20 live: 417 intent <time>22:25</time></div>
-<div>Bot sempat mati, nyala otomatis <time>22:16</time></div>
+<div>Remediasi 96 file kelar, 0 regresi <time>20:35 WIB</time></div>
+<div>Serapan run-20 live: 417 intent <time>22:25 WIB</time></div>
+<div>Bot sempat mati, nyala otomatis <time>22:16 WIB</time></div>
 </div></div>
-<div class="panel"><h3>Paling sering bikin fallback</h3><div class="hint">Klik buat lihat pertanyaannya</div>
+<div class="panel"><h3>Paling sering bikin fallback</h3><div class="hint">Ketuk baris buat lihat pertanyaannya</div>
 <div class="rl"><span>"reng bau"</span><span class="a">banter</span></div>
 <div class="rl"><span>"tebak siapa"</span><span class="a">pola lebar</span></div>
 </div></div>
@@ -122,45 +143,45 @@ h1{font-size:19px}
 <h1>Otak</h1><p class="lede"><b>55.171</b> intent · <b>231.021</b> pola · 0 rusak</p>
 <div class="duo">
 <div class="panel"><h3>Pertumbuhan 7 hari</h3>
-<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none"><polyline points="0,60 50,55 100,48 150,38 200,28 250,18 300,10" fill="none" stroke="#ededed" stroke-width="2"/><circle cx="300" cy="10" r="4" fill="#8fd694"/></svg>
-<div style="font-size:12px;color:#888;margin-top:6px">50.732 → 55.171 (+4.439)</div></div>
-<div class="panel"><h3>Laris vs nganggur</h3><div class="hint">30 hari</div>
-<div class="rl"><span>Sapaan & banter</span><span class="tag">12,4rb hit</span></div>
+<svg class="chart" viewBox="0 0 300 80" preserveAspectRatio="xMidYMid meet"><polyline points="0,68 50,62 100,54 150,43 200,32 250,20 300,12" fill="none" stroke="#ededed" stroke-width="2.5"/><circle cx="300" cy="12" r="4.5" fill="#8fd694"/></svg>
+<div class="tick">50.732 → 55.171 (+4.439)</div></div>
+<div class="panel"><h3>Laris vs nganggur</h3><div class="hint">30 hari terakhir</div>
+<div class="rl"><span>Sapaan &amp; banter</span><span class="tag">12,4rb hit</span></div>
 <div class="rl"><span>Nganggur 90 hari</span><span class="tag">312</span></div>
 <div class="rl"><span>Pola mati</span><span class="tag">0</span></div></div>
 </div>
-<div class="panel" style="margin-top:10px"><h3>Cari intent</h3><div class="hint">Klik hasil buat lihat detail pola</div>
-<div style="background:#0e0e10;border:1px solid #26262a;border-radius:8px;padding:9px 12px;font-size:12px;color:#666">cth: b55905_dengerin_penuh_dulu …</div></div>
+<div class="panel"><h3>Cari intent</h3><div class="hint">Ketuk hasil buat lihat detail pola</div>
+<div style="background:#0e0e10;border:1px solid #26262a;border-radius:10px;padding:12px;font-size:12.5px;color:#666">cth: b55905_dengerin_penuh_dulu …</div></div>
 </div>
 
 <div class="page" id="p3">
-<h1>Jawaban</h1><p class="lede">Dari mana jawaban datang</p>
+<h1>Jawaban</h1><p class="lede">Dari mana jawaban datang hari ini</p>
 <div class="duo">
-<div class="panel"><h3>Donat sumber hari ini</h3>
+<div class="panel"><h3>Sumber jawaban</h3>
 <div class="donut">
-<svg width="110" height="110" viewBox="0 0 110 110">
-<circle cx="55" cy="55" r="44" fill="none" stroke="#222226" stroke-width="14"/>
-<circle cx="55" cy="55" r="44" fill="none" stroke="#ededed" stroke-width="14" stroke-dasharray="199 276" stroke-dashoffset="69" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="44" fill="none" stroke="#555" stroke-width="14" stroke-dasharray="26 276" stroke-dashoffset="-130" transform="rotate(-90 55 55)"/>
-<circle cx="55" cy="55" r="44" fill="none" stroke="#e0a33e" stroke-width="14" stroke-dasharray="51 276" stroke-dashoffset="-156" transform="rotate(-90 55 55)"/>
-<text x="55" y="60" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">72%</text>
+<svg width="104" height="104" viewBox="0 0 110 110" role="img" aria-label="donat sumber jawaban">
+<circle cx="55" cy="55" r="44" fill="none" stroke="#222226" stroke-width="15"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#ededed" stroke-width="15" stroke-dasharray="199 276" stroke-dashoffset="69" transform="rotate(-90 55 55)" stroke-linecap="butt"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#5a5a5e" stroke-width="15" stroke-dasharray="26 276" stroke-dashoffset="-130" transform="rotate(-90 55 55)"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#e0a33e" stroke-width="15" stroke-dasharray="51 276" stroke-dashoffset="-156" transform="rotate(-90 55 55)"/>
+<text x="55" y="61" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">72%</text>
 </svg>
 <div class="legend">
-<div><i style="background:#ededed"></i>Scripted 72%</div>
-<div><i style="background:#555"></i>LLM 9,5%</div>
-<div><i style="background:#e0a33e"></i>Fallback 18,5%</div>
+<div><i style="background:#ededed"></i>Scripted · 72%</div>
+<div><i style="background:#5a5a5e"></i>LLM · 9,5%</div>
+<div><i style="background:#e0a33e"></i>Fallback · 18,5%</div>
 </div></div></div>
 <div class="panel"><h3>Tren fallback 30 hari</h3><div class="hint">Garis turun = bagus</div>
-<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none"><polyline points="0,15 60,22 120,30 180,42 240,52 300,58" fill="none" stroke="#e0a33e" stroke-width="2"/></svg>
-<div style="font-size:12px;color:#888">18,81% → 18,52%</div></div>
+<svg class="chart" viewBox="0 0 300 80" preserveAspectRatio="xMidYMid meet"><polyline points="0,20 60,27 120,35 180,47 240,57 300,63" fill="none" stroke="#e0a33e" stroke-width="2.5"/></svg>
+<div class="tick">18,81% → 18,52%</div></div>
 </div></div>
 
 <div class="page" id="p4">
-<h1>Aktivitas</h1><p class="lede">Ramai-ramai chat</p>
+<h1>Aktivitas</h1><p class="lede">Ramai-ramai chat hari ini</p>
 <div class="duo">
-<div class="panel"><h3>Chat per jam hari ini</h3><div class="hint">Puncak jam 21</div>
-<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none">
-<rect x="10" y="45" width="18" height="25" rx="3" fill="#333"/><rect x="40" y="35" width="18" height="35" rx="3" fill="#333"/><rect x="70" y="40" width="18" height="30" rx="3" fill="#333"/><rect x="100" y="25" width="18" height="45" rx="3" fill="#555"/><rect x="130" y="30" width="18" height="40" rx="3" fill="#555"/><rect x="160" y="15" width="18" height="55" rx="3" fill="#ededed"/><rect x="190" y="28" width="18" height="42" rx="3" fill="#555"/>
+<div class="panel"><h3>Chat per jam</h3><div class="hint">Puncak jam 21</div>
+<svg class="chart" viewBox="0 0 300 90" preserveAspectRatio="xMidYMid meet">
+<rect x="8" y="55" width="30" height="30" rx="4" fill="#2c2c30"/><rect x="50" y="42" width="30" height="43" rx="4" fill="#2c2c30"/><rect x="92" y="48" width="30" height="37" rx="4" fill="#2c2c30"/><rect x="134" y="28" width="30" height="57" rx="4" fill="#4a4a50"/><rect x="176" y="34" width="30" height="51" rx="4" fill="#4a4a50"/><rect x="218" y="12" width="30" height="73" rx="4" fill="#ededed"/><rect x="260" y="38" width="30" height="47" rx="4" fill="#4a4a50"/>
 </svg></div>
 <div class="panel"><h3>Topik lagi rame</h3>
 <div class="rl"><span>OTT KPK BNPB</span><span class="tag">scout</span></div>
@@ -168,16 +189,16 @@ h1{font-size:19px}
 </div></div>
 
 <div class="page" id="p5">
-<h1>Antrean belajar</h1><p class="lede"><b>98</b> draft nunggu review</p>
+<h1>Antrean belajar</h1><p class="lede"><b>98</b> draft nunggu review · gate tetap, nggak dilonggarkan</p>
 <div class="duo">
-<div class="panel"><h3>Progress kuis</h3><div class="bar"><i style="width:12%"></i></div><div style="font-size:12px;color:#888">12 siap kuis parafrase · gate tetap</div></div>
+<div class="panel"><h3>Progress kuis</h3><div class="bar"><i data-w="12"></i></div><div style="font-size:12px;color:#888">12 dari 98 siap kuis parafrase</div></div>
 <div class="panel"><h3>Unmatched terbaru</h3>
 <div class="rl"><span>"reng bau"</span><span class="a">14 Okt 14:55</span></div>
-<div class="rl"><span><i>tidak ada lagi</i></span><span></span></div></div>
+<div class="rl"><span><i style="color:#666">tidak ada lagi</i></span><span></span></div></div>
 </div></div>
 
 <div class="page" id="p6">
-<h1>Serapan</h1><p class="lede">Run per jam · otomatis</p>
+<h1>Serapan</h1><p class="lede">Run per jam · otomatis jalan sendiri</p>
 <div class="panel"><div class="feed">
 <div>Run ke-20 · 417 intent · <b style="color:#8fd694">live</b> <time>22:25 WIB</time></div>
 <div>Run ke-19 · 411 intent · staged <time>19:49 WIB</time></div>
@@ -186,7 +207,7 @@ h1{font-size:19px}
 </div></div></div>
 
 <div class="page" id="p7">
-<h1>Deploy</h1><p class="lede">Riwayat perubahan</p>
+<h1>Deploy</h1><p class="lede">Riwayat perubahan ke produksi</p>
 <div class="panel"><div class="feed">
 <div>Serapan run-18..20: +1.402 intent <time>22:25 · 0803d6d8</time></div>
 <div>Remediasi uppercase 96 file, 0 regresi <time>20:35 · wave 1–5</time></div>
@@ -196,9 +217,9 @@ h1{font-size:19px}
 <div class="page" id="p8">
 <h1>Kesehatan</h1><p class="lede">Kondisi bot saat ini</p>
 <div class="cards">
-<div class="c"><div class="k">Status</div><div class="v" style="font-size:22px;color:#8fd694">Online</div><div class="f">pid 22149</div></div>
-<div class="c"><div class="k">Uptime</div><div class="v" style="font-size:22px">6<small>j</small> 12<small>m</small></div><div class="f">stabil</div></div>
-<div class="c"><div class="k">Restart terakhir</div><div class="v" style="font-size:22px">22:16</div><div class="f">otomatis</div></div>
+<div class="c"><div class="k">Status</div><div class="v" style="font-size:20px;color:#8fd694">Online</div><div class="f">pid 22149</div></div>
+<div class="c"><div class="k">Uptime</div><div class="v" style="font-size:20px">6j 12m</div><div class="f">stabil</div></div>
+<div class="c"><div class="k">Restart terakhir</div><div class="v" style="font-size:20px">22:16</div><div class="f">otomatis</div></div>
 <div class="c"><div class="k">Error 24 jam</div><div class="v">0</div><div class="f">bersih</div></div>
 </div></div>
 
@@ -212,7 +233,7 @@ h1{font-size:19px}
 </div></div>
 
 <div class="page" id="p10">
-<h1>Laporan</h1><p class="lede">Unduh & bandingkan</p>
+<h1>Laporan</h1><p class="lede">Unduh &amp; bandingkan</p>
 <div class="panel">
 <div class="rl"><span>Laporan harian 14 Okt</span><span class="tag">unduh</span></div>
 <div class="rl"><span>Laporan mingguan</span><span class="tag">unduh</span></div>
@@ -227,11 +248,33 @@ h1{font-size:19px}
 </main>
 </div>
 <script>
-document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
-document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
-document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
-b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on');
-}));
+(function(){
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(el){
+  var target=parseFloat(el.dataset.count), dec=parseInt(el.dataset.dec||'0',10);
+  if(reduce){el.textContent=target.toLocaleString('id-ID',{minimumFractionDigits:dec,maximumFractionDigits:dec});return;}
+  var t0=null,dur=900;
+  function fr(t){if(!t0)t0=t;var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3),v=target*e;
+    el.textContent=v.toLocaleString('id-ID',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+    if(p<1)requestAnimationFrame(fr);}
+  requestAnimationFrame(fr);
+}
+function activate(page){
+  page.querySelectorAll('[data-count]').forEach(countUp);
+  page.querySelectorAll('.bar i[data-w]').forEach(function(b){b.style.width='0';requestAnimationFrame(function(){requestAnimationFrame(function(){b.style.width=b.dataset.w+'%';});});});
+}
+var btns=document.querySelectorAll('#nav button');
+btns.forEach(function(b){b.addEventListener('click',function(){
+  btns.forEach(function(x){x.classList.remove('on');});
+  document.querySelectorAll('.page').forEach(function(x){x.classList.remove('on');});
+  b.classList.add('on');
+  var p=document.getElementById(b.dataset.p);p.classList.add('on');
+  document.getElementById('main').scrollTop=0;
+  b.scrollIntoView({block:'nearest',inline:'nearest',behavior:reduce?'auto':'smooth'});
+  activate(p);
+});});
+activate(document.getElementById('p1'));
+})();
 </script>
 </body>
 </html>
