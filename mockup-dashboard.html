@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#0b0b0c;color:#ededed}
+.mock{background:#161616;color:#777;text-align:center;font-size:10px;padding:6px;letter-spacing:2px}
+.app{display:flex;height:calc(100vh - 29px)}
+aside{width:200px;background:#101012;border-right:1px solid #1e1e20;padding:18px 12px;flex-shrink:0;overflow:hidden}
+aside .logo{font-size:15px;font-weight:800;letter-spacing:1px}
+aside .logo em{font-style:normal;color:#777;font-weight:400}
+aside .sub{font-size:10.5px;color:#5a5a5a;margin:2px 0 14px}
+nav .g{font-size:9.5px;color:#555;text-transform:uppercase;letter-spacing:1.5px;margin:12px 10px 5px}
+nav button{display:flex;justify-content:space-between;width:100%;background:none;border:none;color:#999;font-size:12.5px;padding:8px 10px;border-radius:8px;cursor:pointer;text-align:left;font-family:inherit}
+nav button.on{background:#1c1c1f;color:#fff}
+nav button .n{font-size:10px;background:#26262a;color:#bbb;border-radius:10px;padding:1px 7px}
+main{flex:1;padding:18px 22px;overflow:hidden;min-width:0}
+.eyebrow{font-size:11px;color:#777;margin-bottom:4px}
+h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
+.lede{font-size:12.5px;color:#999;margin:4px 0 14px}.lede b{color:#fff}
+.page{display:none;height:calc(100% - 90px)}
+.page.on{display:block}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+.c{background:#131315;border:1px solid #222226;border-radius:12px;padding:13px 15px}
+.c .k{font-size:10.5px;color:#888;margin-bottom:7px}
+.c .v{font-size:26px;font-weight:800;letter-spacing:-.5px}
+.c .v small{font-size:12px;font-weight:400;color:#888}
+.c .f{font-size:11px;margin-top:5px;color:#8fd694}
+.c .f.warn{color:#e0a33e}
+.duo{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+.panel{background:#131315;border:1px solid #222226;border-radius:12px;padding:14px 16px;overflow:hidden}
+.panel h3{font-size:12.5px;font-weight:650;margin-bottom:2px}
+.panel .hint{font-size:11px;color:#777;margin-bottom:8px}
+.rl{font-size:12px;color:#bbb;padding:7px 0;border-bottom:1px solid #1d1d20;display:flex;justify-content:space-between;gap:8px}
+.rl:last-child{border:none}
+.rl .a{color:#777;font-size:11px}
+.tag{font-size:10px;background:#1f1f1f;color:#ccc;padding:2px 9px;border-radius:11px;white-space:nowrap}
+.bar{height:6px;background:#222226;border-radius:3px;overflow:hidden;margin:5px 0 8px}
+.bar i{display:block;height:100%;background:#ededed;border-radius:3px}
+.feed{font-size:12px;color:#bbb}.feed div{padding:6px 0;border-bottom:1px solid #1d1d20}.feed div:last-child{border:none}
+.feed time{color:#666;font-size:10.5px}
+.note{background:#141410;border:1px dashed #3a3a2a;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#c9b98a}
+.dot{display:inline-block;width:7px;height:8px;border-radius:50%;background:#8fd694;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="mock">MOCKUP TANPA SCROLL — PREVIEW SAJA</div>
+<div class="app">
+<aside>
+<div class="logo">IRENG <em>panel</em></div><div class="sub">ireng.adipmusic.my.id</div>
+<nav>
+<div class="g">Pantau</div>
+<button class="on" data-p="p1">Ringkasan</button>
+<button data-p="p2">Otak <span class="n">55rb</span></button>
+<button data-p="p3">Jawaban</button>
+<button data-p="p4">Aktivitas</button>
+<div class="g">Belajar</div>
+<button data-p="p5">Antrean <span class="n">98</span></button>
+<button data-p="p6">Serapan</button>
+<div class="g">Sistem</div>
+<button data-p="p7">Deploy</button>
+<button data-p="p8">Kesehatan</button>
+<button data-p="p9">Keamanan</button>
+<div class="g">Lainnya</div>
+<button data-p="p10">Laporan</button>
+<button data-p="p11">Catatan</button>
+</nav>
+</aside>
+<main>
+<div class="eyebrow">Rabu, 14 Okt 2026 · live · <span style="color:#8fd694"><span class="dot"></span>bot online</span></div>
+
+<div class="page on" id="p1">
+<h1>Semua aman, fallback 18,52%</h1>
+<p class="lede">Online <b>6 jam 12 menit</b> · semalam nambah <b>1.252 intent</b> · skor <b>87/100</b></p>
+<div class="cards">
+<div class="c"><div class="k">Intent hidup</div><div class="v">55.171</div><div class="f">+1.252 sejak kemarin</div></div>
+<div class="c"><div class="k">Pola regex</div><div class="v">231<small>.021</small></div><div class="f">0 rusak</div></div>
+<div class="c"><div class="k">Fallback</div><div class="v">18,52<small>%</small></div><div class="f warn">target &lt; 2%</div></div>
+<div class="c"><div class="k">Scripted</div><div class="v">72<small>%</small></div><div class="f">tanpa AI luar</div></div>
+</div>
+<div class="duo">
+<div class="panel"><h3>Kabar terakhir</h3><div class="feed">
+<div>Remediasi 96 file kelar, 0 regresi <time>20:35</time></div>
+<div>Serapan run-20 live: 417 intent <time>22:25</time></div>
+<div>Bot sempat mati, nyala otomatis <time>22:16</time></div>
+</div></div>
+<div class="panel"><h3>Paling sering bikin fallback</h3><div class="hint">Klik buat lihat pertanyaannya</div>
+<div class="rl"><span>"reng bau"</span><span class="a">banter</span></div>
+<div class="rl"><span>"tebak siapa"</span><span class="a">pola lebar</span></div>
+</div></div>
+</div>
+
+<div class="page" id="p2">
+<h1>Otak</h1><p class="lede">Isi kepala Ireng · <b>55.171</b> intent · <b>231.021</b> pola</p>
+<div class="duo">
+<div class="panel"><h3>Pertumbuhan 7 hari</h3><div class="bar"><i style="width:64%"></i></div><div style="font-size:12px;color:#888">50.732 → 55.171 (+4.439)</div>
+<h3 style="margin-top:14px">Cari intent</h3><div class="hint">Klik hasil buat lihat detail pola</div>
+<div style="background:#0e0e10;border:1px solid #26262a;border-radius:8px;padding:9px 12px;font-size:12px;color:#666">cth: b55905_dengerin_penuh_dulu …</div></div>
+<div class="panel"><h3>Laris vs nganggur</h3><div class="hint">30 hari</div>
+<div class="rl"><span>Sapaan & banter</span><span class="tag">12,4rb hit</span></div>
+<div class="rl"><span>Nganggur 90 hari</span><span class="tag">312</span></div>
+<div class="rl"><span>Pola mati</span><span class="tag">0</span></div></div>
+</div></div>
+
+<div class="page" id="p3">
+<h1>Jawaban</h1><p class="lede">Dari mana jawaban datang hari ini</p>
+<div class="duo">
+<div class="panel"><h3>Sumber</h3>
+<div class="rl"><span>Scripted</span><span class="tag">72%</span></div>
+<div class="rl"><span>LLM</span><span class="tag">9,5%</span></div>
+<div class="rl"><span>Fallback</span><span class="tag">18,5%</span></div>
+<div class="hint" style="margin-top:8px">vs minggu lalu: turun 0,3 poin</div></div>
+<div class="panel"><h3>Tren fallback</h3><div class="hint">30 hari · garis turun = bagus</div>
+<div class="bar"><i style="width:70%"></i></div><div style="font-size:12px;color:#888">18,81% → 18,52%</div></div>
+</div></div>
+
+<div class="page" id="p4">
+<h1>Aktivitas</h1><p class="lede">Ramai-ramai chat hari ini</p>
+<div class="duo">
+<div class="panel"><h3>Chat per jam</h3><div class="hint">Puncak jam 21</div><div class="bar"><i style="width:82%"></i></div></div>
+<div class="panel"><h3>Topik lagi rame</h3>
+<div class="rl"><span>OTT KPK BNPB</span><span class="tag">scout</span></div>
+<div class="rl"><span>JxJ SEVENTEEN</span><span class="tag">scout</span></div></div>
+</div></div>
+
+<div class="page" id="p5">
+<h1>Antrean belajar</h1><p class="lede"><b>98</b> draft nunggu review · belum ada yang lolos auto-approve</p>
+<div class="duo">
+<div class="panel"><h3>Progress</h3><div class="bar"><i style="width:12%"></i></div><div style="font-size:12px;color:#888">12 siap kuis parafrase</div></div>
+<div class="panel"><h3>Unmatched terbaru</h3>
+<div class="rl"><span>"reng bau"</span><span class="a">14 Okt 14:55</span></div>
+<div class="rl"><span><i>tidak ada lagi</i></span><span></span></div></div>
+</div></div>
+
+<div class="page" id="p6">
+<h1>Serapan</h1><p class="lede">Run per jam · otomatis</p>
+<div class="panel"><div class="feed">
+<div>Run ke-20 · 417 intent · <b style="color:#8fd694">live</b> <time>22:25 WIB</time></div>
+<div>Run ke-19 · 411 intent · staged <time>19:49 WIB</time></div>
+<div>Run ke-18 · 574 intent · staged <time>18:41 WIB</time></div>
+<div>Kata baru: +450 singkatan EN <time>16:11 WIB</time></div>
+</div></div></div>
+
+<div class="page" id="p7">
+<h1>Deploy</h1><p class="lede">Riwayat perubahan</p>
+<div class="panel"><div class="feed">
+<div>Serapan run-18..20: +1.402 intent <time>22:25 · 0803d6d8</time></div>
+<div>Remediasi uppercase 96 file, 0 regresi <time>20:35 · wave 1–5</time></div>
+<div>Konsolidasi run-12..17: +3.187 intent <time>18:00 · ac6bafdc</time></div>
+</div></div></div>
+
+<div class="page" id="p8">
+<h1>Kesehatan</h1><p class="lede">Kondisi bot saat ini</p>
+<div class="cards">
+<div class="c"><div class="k">Status</div><div class="v" style="font-size:22px;color:#8fd694">Online</div><div class="f">pid 22149</div></div>
+<div class="c"><div class="k">Uptime</div><div class="v" style="font-size:22px">6<small>j</small> 12<small>m</small></div><div class="f">stabil</div></div>
+<div class="c"><div class="k">Restart terakhir</div><div class="v" style="font-size:22px">22:16</div><div class="f">otomatis</div></div>
+<div class="c"><div class="k">Error 24 jam</div><div class="v">0</div><div class="f">bersih</div></div>
+</div></div>
+
+<div class="page" id="p9">
+<h1>Keamanan</h1><p class="lede">Siapa masuk kapan</p>
+<div class="panel">
+<div class="rl"><span>Login terakhir</span><span class="a">lo · 23:40 WIB</span></div>
+<div class="rl"><span>Percobaan gagal 7 hari</span><span class="tag">0</span></div>
+<div class="rl"><span>IP whitelist</span><span class="tag">aktif</span></div>
+<div class="rl"><span>Brute-force shield</span><span class="tag">aktif</span></div>
+</div></div>
+
+<div class="page" id="p10">
+<h1>Laporan</h1><p class="lede">Unduh & bandingkan</p>
+<div class="panel">
+<div class="rl"><span>Laporan harian 14 Okt</span><span class="tag">unduh</span></div>
+<div class="rl"><span>Laporan mingguan</span><span class="tag">unduh</span></div>
+<div class="rl"><span>Fallback minggu ini vs lalu</span><span class="tag">18,52% vs 18,81%</span></div>
+</div></div>
+
+<div class="page" id="p11">
+<h1>Catatan</h1><p class="lede">Coretan lo sendiri</p>
+<div class="note">Fallback harus tembus di bawah 15% minggu ini. Prioritas: deploy antrean 985 intent.</div>
+</div>
+
+</main>
+</div>
+<script>
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
+b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on');
+}));
+</script>
+</body>
+</html>
