@@ -9,27 +9,28 @@ html,body{height:100%;overflow:hidden}
 body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:#0b0b0c;color:#ededed}
 .mock{background:#161616;color:#777;text-align:center;font-size:10px;padding:6px;letter-spacing:2px}
 .app{display:flex;height:calc(100vh - 29px)}
-aside{width:200px;background:#101012;border-right:1px solid #1e1e20;padding:18px 12px;flex-shrink:0;overflow:hidden}
+aside{width:208px;background:#101012;border-right:1px solid #1e1e20;padding:18px 12px;flex-shrink:0;overflow-y:auto}
 aside .logo{font-size:15px;font-weight:800;letter-spacing:1px}
 aside .logo em{font-style:normal;color:#777;font-weight:400}
-aside .sub{font-size:10.5px;color:#5a5a5a;margin:2px 0 14px}
+aside .sub{font-size:10.5px;color:#5a5a5a;margin:2px 0 12px}
 nav .g{font-size:9.5px;color:#555;text-transform:uppercase;letter-spacing:1.5px;margin:12px 10px 5px}
-nav button{display:flex;justify-content:space-between;width:100%;background:none;border:none;color:#999;font-size:12.5px;padding:8px 10px;border-radius:8px;cursor:pointer;text-align:left;font-family:inherit}
+nav button{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;color:#999;font-size:12.5px;padding:9px 10px;border-radius:8px;cursor:pointer;text-align:left;font-family:inherit;min-height:44px}
 nav button.on{background:#1c1c1f;color:#fff}
 nav button .n{font-size:10px;background:#26262a;color:#bbb;border-radius:10px;padding:1px 7px}
-main{flex:1;padding:18px 22px;overflow:hidden;min-width:0}
+main{flex:1;padding:18px 22px;overflow:hidden;min-width:0;display:flex;flex-direction:column}
 .eyebrow{font-size:11px;color:#777;margin-bottom:4px}
 h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
 .lede{font-size:12.5px;color:#999;margin:4px 0 14px}.lede b{color:#fff}
-.page{display:none;height:calc(100% - 90px)}
+.page{display:none;flex:1;min-height:0}
 .page.on{display:block}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
-.c{background:#131315;border:1px solid #222226;border-radius:12px;padding:13px 15px}
+.c{background:#131315;border:1px solid #222226;border-radius:12px;padding:13px 15px;position:relative;overflow:hidden}
 .c .k{font-size:10.5px;color:#888;margin-bottom:7px}
 .c .v{font-size:26px;font-weight:800;letter-spacing:-.5px}
 .c .v small{font-size:12px;font-weight:400;color:#888}
 .c .f{font-size:11px;margin-top:5px;color:#8fd694}
 .c .f.warn{color:#e0a33e}
+.c svg.spark{position:absolute;right:10px;bottom:8px;opacity:.5}
 .duo{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
 .panel{background:#131315;border:1px solid #222226;border-radius:12px;padding:14px 16px;overflow:hidden}
 .panel h3{font-size:12.5px;font-weight:650;margin-bottom:2px}
@@ -43,11 +44,31 @@ h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
 .feed{font-size:12px;color:#bbb}.feed div{padding:6px 0;border-bottom:1px solid #1d1d20}.feed div:last-child{border:none}
 .feed time{color:#666;font-size:10.5px}
 .note{background:#141410;border:1px dashed #3a3a2a;border-radius:10px;padding:11px 14px;font-size:12.5px;color:#c9b98a}
-.dot{display:inline-block;width:7px;height:8px;border-radius:50%;background:#8fd694;margin-right:6px}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#8fd694;margin-right:6px}
+.donut{display:flex;align-items:center;gap:14px}
+.donut svg{flex-shrink:0}
+.legend{font-size:12px;color:#bbb}.legend div{margin:5px 0}.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:7px}
+.mtopbar{display:none}
+/* tablet */
+@media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
+/* mobile: sidebar jadi bar atas horizontal scroll */
+@media(max-width:760px){
+.app{flex-direction:column}
+aside{width:100%;border-right:none;border-bottom:1px solid #1e1e20;padding:10px 12px;height:auto}
+aside .sub{display:none}
+aside .logo{margin-bottom:8px}
+nav{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+nav .g{display:none}
+nav button{white-space:nowrap;flex-shrink:0;min-height:44px}
+main{padding:14px}
+h1{font-size:19px}
+.duo{grid-template-columns:1fr}
+.c .v{font-size:23px}
+}
 </style>
 </head>
 <body>
-<div class="mock">MOCKUP TANPA SCROLL — PREVIEW SAJA</div>
+<div class="mock">MOCKUP — PREVIEW SAJA · RESPONSIF PENUH</div>
 <div class="app">
 <aside>
 <div class="logo">IRENG <em>panel</em></div><div class="sub">ireng.adipmusic.my.id</div>
@@ -76,10 +97,14 @@ h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
 <h1>Semua aman, fallback 18,52%</h1>
 <p class="lede">Online <b>6 jam 12 menit</b> · semalam nambah <b>1.252 intent</b> · skor <b>87/100</b></p>
 <div class="cards">
-<div class="c"><div class="k">Intent hidup</div><div class="v">55.171</div><div class="f">+1.252 sejak kemarin</div></div>
-<div class="c"><div class="k">Pola regex</div><div class="v">231<small>.021</small></div><div class="f">0 rusak</div></div>
-<div class="c"><div class="k">Fallback</div><div class="v">18,52<small>%</small></div><div class="f warn">target &lt; 2%</div></div>
-<div class="c"><div class="k">Scripted</div><div class="v">72<small>%</small></div><div class="f">tanpa AI luar</div></div>
+<div class="c"><div class="k">Intent hidup</div><div class="v">55.171</div><div class="f">+1.252 sejak kemarin</div>
+<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,22 12,20 24,18 36,14 48,10 60,6 70,3" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Pola regex</div><div class="v">231<small>.021</small></div><div class="f">0 rusak</div>
+<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,20 14,19 28,16 42,12 56,8 70,5" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Fallback</div><div class="v">18,52<small>%</small></div><div class="f warn">target &lt; 2%</div>
+<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,4 14,7 28,9 42,13 56,17 70,20" fill="none" stroke="#e0a33e" stroke-width="2"/></svg></div>
+<div class="c"><div class="k">Scripted</div><div class="v">72<small>%</small></div><div class="f">tanpa AI luar</div>
+<svg class="spark" width="70" height="26" viewBox="0 0 70 26"><polyline points="0,18 14,16 28,14 42,11 56,9 70,7" fill="none" stroke="#8fd694" stroke-width="2"/></svg></div>
 </div>
 <div class="duo">
 <div class="panel"><h3>Kabar terakhir</h3><div class="feed">
@@ -94,42 +119,58 @@ h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
 </div>
 
 <div class="page" id="p2">
-<h1>Otak</h1><p class="lede">Isi kepala Ireng · <b>55.171</b> intent · <b>231.021</b> pola</p>
+<h1>Otak</h1><p class="lede"><b>55.171</b> intent · <b>231.021</b> pola · 0 rusak</p>
 <div class="duo">
-<div class="panel"><h3>Pertumbuhan 7 hari</h3><div class="bar"><i style="width:64%"></i></div><div style="font-size:12px;color:#888">50.732 → 55.171 (+4.439)</div>
-<h3 style="margin-top:14px">Cari intent</h3><div class="hint">Klik hasil buat lihat detail pola</div>
-<div style="background:#0e0e10;border:1px solid #26262a;border-radius:8px;padding:9px 12px;font-size:12px;color:#666">cth: b55905_dengerin_penuh_dulu …</div></div>
+<div class="panel"><h3>Pertumbuhan 7 hari</h3>
+<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none"><polyline points="0,60 50,55 100,48 150,38 200,28 250,18 300,10" fill="none" stroke="#ededed" stroke-width="2"/><circle cx="300" cy="10" r="4" fill="#8fd694"/></svg>
+<div style="font-size:12px;color:#888;margin-top:6px">50.732 → 55.171 (+4.439)</div></div>
 <div class="panel"><h3>Laris vs nganggur</h3><div class="hint">30 hari</div>
 <div class="rl"><span>Sapaan & banter</span><span class="tag">12,4rb hit</span></div>
 <div class="rl"><span>Nganggur 90 hari</span><span class="tag">312</span></div>
 <div class="rl"><span>Pola mati</span><span class="tag">0</span></div></div>
-</div></div>
+</div>
+<div class="panel" style="margin-top:10px"><h3>Cari intent</h3><div class="hint">Klik hasil buat lihat detail pola</div>
+<div style="background:#0e0e10;border:1px solid #26262a;border-radius:8px;padding:9px 12px;font-size:12px;color:#666">cth: b55905_dengerin_penuh_dulu …</div></div>
+</div>
 
 <div class="page" id="p3">
-<h1>Jawaban</h1><p class="lede">Dari mana jawaban datang hari ini</p>
+<h1>Jawaban</h1><p class="lede">Dari mana jawaban datang</p>
 <div class="duo">
-<div class="panel"><h3>Sumber</h3>
-<div class="rl"><span>Scripted</span><span class="tag">72%</span></div>
-<div class="rl"><span>LLM</span><span class="tag">9,5%</span></div>
-<div class="rl"><span>Fallback</span><span class="tag">18,5%</span></div>
-<div class="hint" style="margin-top:8px">vs minggu lalu: turun 0,3 poin</div></div>
-<div class="panel"><h3>Tren fallback</h3><div class="hint">30 hari · garis turun = bagus</div>
-<div class="bar"><i style="width:70%"></i></div><div style="font-size:12px;color:#888">18,81% → 18,52%</div></div>
+<div class="panel"><h3>Donat sumber hari ini</h3>
+<div class="donut">
+<svg width="110" height="110" viewBox="0 0 110 110">
+<circle cx="55" cy="55" r="44" fill="none" stroke="#222226" stroke-width="14"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#ededed" stroke-width="14" stroke-dasharray="199 276" stroke-dashoffset="69" transform="rotate(-90 55 55)"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#555" stroke-width="14" stroke-dasharray="26 276" stroke-dashoffset="-130" transform="rotate(-90 55 55)"/>
+<circle cx="55" cy="55" r="44" fill="none" stroke="#e0a33e" stroke-width="14" stroke-dasharray="51 276" stroke-dashoffset="-156" transform="rotate(-90 55 55)"/>
+<text x="55" y="60" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">72%</text>
+</svg>
+<div class="legend">
+<div><i style="background:#ededed"></i>Scripted 72%</div>
+<div><i style="background:#555"></i>LLM 9,5%</div>
+<div><i style="background:#e0a33e"></i>Fallback 18,5%</div>
+</div></div></div>
+<div class="panel"><h3>Tren fallback 30 hari</h3><div class="hint">Garis turun = bagus</div>
+<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none"><polyline points="0,15 60,22 120,30 180,42 240,52 300,58" fill="none" stroke="#e0a33e" stroke-width="2"/></svg>
+<div style="font-size:12px;color:#888">18,81% → 18,52%</div></div>
 </div></div>
 
 <div class="page" id="p4">
-<h1>Aktivitas</h1><p class="lede">Ramai-ramai chat hari ini</p>
+<h1>Aktivitas</h1><p class="lede">Ramai-ramai chat</p>
 <div class="duo">
-<div class="panel"><h3>Chat per jam</h3><div class="hint">Puncak jam 21</div><div class="bar"><i style="width:82%"></i></div></div>
+<div class="panel"><h3>Chat per jam hari ini</h3><div class="hint">Puncak jam 21</div>
+<svg width="100%" height="70" viewBox="0 0 300 70" preserveAspectRatio="none">
+<rect x="10" y="45" width="18" height="25" rx="3" fill="#333"/><rect x="40" y="35" width="18" height="35" rx="3" fill="#333"/><rect x="70" y="40" width="18" height="30" rx="3" fill="#333"/><rect x="100" y="25" width="18" height="45" rx="3" fill="#555"/><rect x="130" y="30" width="18" height="40" rx="3" fill="#555"/><rect x="160" y="15" width="18" height="55" rx="3" fill="#ededed"/><rect x="190" y="28" width="18" height="42" rx="3" fill="#555"/>
+</svg></div>
 <div class="panel"><h3>Topik lagi rame</h3>
 <div class="rl"><span>OTT KPK BNPB</span><span class="tag">scout</span></div>
 <div class="rl"><span>JxJ SEVENTEEN</span><span class="tag">scout</span></div></div>
 </div></div>
 
 <div class="page" id="p5">
-<h1>Antrean belajar</h1><p class="lede"><b>98</b> draft nunggu review · belum ada yang lolos auto-approve</p>
+<h1>Antrean belajar</h1><p class="lede"><b>98</b> draft nunggu review</p>
 <div class="duo">
-<div class="panel"><h3>Progress</h3><div class="bar"><i style="width:12%"></i></div><div style="font-size:12px;color:#888">12 siap kuis parafrase</div></div>
+<div class="panel"><h3>Progress kuis</h3><div class="bar"><i style="width:12%"></i></div><div style="font-size:12px;color:#888">12 siap kuis parafrase · gate tetap</div></div>
 <div class="panel"><h3>Unmatched terbaru</h3>
 <div class="rl"><span>"reng bau"</span><span class="a">14 Okt 14:55</span></div>
 <div class="rl"><span><i>tidak ada lagi</i></span><span></span></div></div>
@@ -175,7 +216,7 @@ h1{font-size:21px;font-weight:750;letter-spacing:-.3px}
 <div class="panel">
 <div class="rl"><span>Laporan harian 14 Okt</span><span class="tag">unduh</span></div>
 <div class="rl"><span>Laporan mingguan</span><span class="tag">unduh</span></div>
-<div class="rl"><span>Fallback minggu ini vs lalu</span><span class="tag">18,52% vs 18,81%</span></div>
+<div class="rl"><span>Minggu ini vs lalu</span><span class="tag">18,52% vs 18,81%</span></div>
 </div></div>
 
 <div class="page" id="p11">
