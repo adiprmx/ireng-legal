@@ -578,11 +578,14 @@ function render(){
   $('ringFg').style.strokeDashoffset=off;
   tickFresh();
 }
-/* poll: jitter kecil ±0.3% tiap 2 detik — simulasi, bukan klaim presisi ms */
+/* poll: jitter kecil ±0.3% tiap 2 detik — HANYA metrik volatil.
+   Counter monoton (intent, pola, draft) TIDAK PERNAH di-jitter: total intent
+   cuma bisa naik saat deploy, bukan goyang tiap detik. Simulasi, bukan klaim presisi ms */
+var MONOTONIC={intent:1,pola:1,draft:1};
 function poll(){
   var now=Date.now();
   Object.keys(STORE).forEach(function(k){
-    if(k==='uptimeMin')return; // uptime diakumulasi terpisah
+    if(k==='uptimeMin'||MONOTONIC[k]){STORE[k].t=now;return;} // monoton: timestamp aja
     var m=STORE[k], jit=(Math.random()-0.5)*0.006;
     if(k==='health'){m.v=Math.min(100,Math.max(0,Math.round(m.v*(1+jit))));}
     else if(k==='fallback'||k==='scripted'){m.v=Math.max(0,m.v*(1+jit));}
